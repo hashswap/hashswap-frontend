@@ -57,6 +57,12 @@ const PoolToggleButton: React.FC<ButtonGroupProps> = (props: ButtonGroupProps) =
         className={classes.tab}>
         Manage
       </Button>
+      <Button
+        onClick={() => onTypeChange("addSponsor")}
+        variant={poolType === "addSponsor" ? "contained" : "outlined"}
+        className={classes.tab}>
+    	Sponsor
+      </Button>
     </ButtonGroup>
   );
 };

@@ -6,3 +6,5 @@ export { default as PoolIcon } from "./PoolIcon";
 export { default as PoolManage } from "./PoolManage";
 export { default as PoolToggleButton } from "./PoolToggleButton";
 export { default as PoolWithdraw } from "./PoolWithdraw";
+export { default as SponsorDeposit } from "./SponsorDeposit";
+export { default as SponsorWithdraw } from "./SponsorWithdraw";
