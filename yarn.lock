@@ -9719,10 +9719,10 @@ hash.js@1.1.7, hash.js@^1.0.0, hash.js@^1.0.3, hash.js@^1.1.5, hash.js@^1.1.7, h
     inherits "^2.0.3"
     minimalistic-assert "^1.0.1"
 
-hashswap-zilliqa-js-sdk@^1.0.129:
-  version "1.0.129"
-  resolved "https://registry.yarnpkg.com/hashswap-zilliqa-js-sdk/-/hashswap-zilliqa-js-sdk-1.0.129.tgz#5e3b922da3da1d3689f6a43c691be051352db042"
-  integrity sha512-KoTT9sSfuW9b8poXLQgaa3/ykMNiz4KIw6+o8pFAwKe0p9IHSTwLA5AHpHdggzX82UFmAcdLOlEmnKtEiY0HTQ==
+hashswap-zilliqa-js-sdk@^1.0.137:
+  version "1.0.137"
+  resolved "https://registry.yarnpkg.com/hashswap-zilliqa-js-sdk/-/hashswap-zilliqa-js-sdk-1.0.137.tgz#89a6c5854941b128ef1c9fdb47cb693d5a9b42e0"
+  integrity sha512-16AE1eBLoeiO/mRUv6d/U8BgstbTmB5d86Rf7inQY2vCRHeKKR3jatTeoe9Mss2EBkIrGcv0Wn0+Jne1Iges6g==
   dependencies:
     "@zilliqa-js/zilliqa" "^2.2.0"
     async-mutex "^0.2.2"
