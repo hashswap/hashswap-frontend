@@ -196,11 +196,7 @@ const SponsorDeposit: React.FC<React.HTMLAttributes<HTMLDivElement>> = (props: a
     runAddSponsor(async () => {
       const tokenAddress = poolToken.address;
       const { addZilAmount } = poolFormState;
-      const tokenBalance = strings.bnOrZero(poolToken!.balance).shiftedBy(-poolToken.decimals);
-
-      // const husdToken = tokenState.tokens[HUSD_ADDRESS];
       const zilBalance = strings.bnOrZero(husdToken!.balance).shiftedBy(-husdToken.decimals);
-
 
       if (addZilAmount.gt(zilBalance)) {
         throw new Error(`Insufficient ZIL balance.`)
