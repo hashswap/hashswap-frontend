@@ -39,6 +39,11 @@ export interface AddTokenProps {
   address: string;
 };
 
+export interface AddSponsorProps {
+  tokenID: string;
+  zilAmount: BigNumber;
+};
+
 export interface AddLiquidityProps {
   tokenID: string;
   zilAmount: BigNumber;
@@ -210,6 +215,43 @@ export class ZilswapConnector {
       props.amount.toString());
   };
 
+  /**
+   * Abstraction for Zilswap SDK functions
+   * `addLiquidity`
+   *
+   * @param tokenID string
+   * @param zilAmount BigNumber
+   * @param tokenAmount BigNumber
+   * @param maxExchangeRateChange number?
+   * @see zilswap-sdk documentation
+   *
+   * @throws "not initialized" if `ZilswapConnector.setSDK` has not been called.
+   */
+  static addSponsor = async (props: AddSponsorProps) => {
+    if (!zilswap) throw new Error('not initialized');
+    logger(props.tokenID);
+    logger(props.zilAmount.toString());
+    console.log("CONNECTOR ZILLL");
+    console.log("CONNECTOR ZILLL");
+    console.log("CONNECTOR ZILLL");
+    console.log("CONNECTOR ZILLL");
+    console.log("CONNECTOR ZILLL");
+    console.log(props.zilAmount);
+    console.log("CONNECTOR ZILLL");
+    console.log("CONNECTOR ZILLL");
+    console.log("CONNECTOR ZILLL");
+    console.log("CONNECTOR ZILLL");
+
+    const observedTx = await zilswap.AddSponsor(
+      props.tokenID,
+      props.zilAmount.toString());
+    handleObservedTx(observedTx);
+
+    return observedTx;
+  };
+
+  /**
+   * Abstraction for Zilswap SDK functions
   /**
    * Abstraction for Zilswap SDK functions
    * `addLiquidity`

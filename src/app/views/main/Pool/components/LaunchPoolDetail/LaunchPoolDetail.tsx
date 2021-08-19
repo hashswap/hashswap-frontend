@@ -4,7 +4,7 @@ import { HelpInfo, KeyValueDisplay, PotentialRewardInfo } from "app/components";
 import { LayoutState, RootState, TokenInfo, TokenState } from "app/store/types";
 import { AppTheme } from "app/theme/types";
 import { useMoneyFormatter } from "app/utils";
-import { BIG_ZERO, HUSD_ADDRESS, ZIL_ADDRESS } from "app/utils/constants";
+import { BIG_ZERO, HUSD_ADDRESS } from "app/utils/constants";
 import { MoneyFormatterOptions } from "app/utils/useMoneyFormatter";
 import BigNumber from "bignumber.js";
 import cls from "classnames";
@@ -85,7 +85,7 @@ const LaunchPoolDetail: React.FC<PoolDetailProps> = (props: PoolDetailProps) => 
   
   const getShareValue = () => {
     if (!token?.pool) return <span className={classes.textWrapper}>-</span>;
-    const { userSponsor, hashSponsorship } = token.pool;
+    const { userSponsor } = token.pool;
 
     const hashContribution = userSponsor.sponsorHusd;
     return (
@@ -104,7 +104,7 @@ const LaunchPoolDetail: React.FC<PoolDetailProps> = (props: PoolDetailProps) => 
   
   const getRemoveShareValue = () => {
     if (!token?.pool) return <span className={classes.textWrapper}>-</span>;
-    const { userSponsor, hashSponsorship } = token.pool;
+    const { userSponsor } = token.pool;
 
     const removeContribution = userSponsor.removeHusd;
     const removeDeadline = userSponsor.lockIn;

@@ -5,10 +5,10 @@ import { CurrencyInput, FancyButton, ProportionSelect } from "app/components";
 import { actions } from "app/store";
 import { PoolFormState, RootState, SwapFormState, TokenInfo, TokenState, WalletObservedTx, WalletState } from "app/store/types";
 import { strings, useAsyncTask, useNetwork, useToaster } from "app/utils";
-import { BIG_ZERO, BIG_ONE, HUSD_ADDRESS } from "app/utils/constants";
+import { BIG_ZERO, HUSD_ADDRESS } from "app/utils/constants";
 import BigNumber from "bignumber.js";
 import clsx from "clsx";
-import { toBasisPoints, ZilswapConnector } from "core/zilswap";
+import { ZilswapConnector } from "core/zilswap";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { LAUNCHER } from "hashswap-zilliqa-js-sdk/lib/constants";
@@ -188,22 +188,19 @@ const SponsorDeposit: React.FC<React.HTMLAttributes<HTMLDivElement>> = (props: a
 
   const onAddSponsor = () => {
     if (!poolToken) return setCurrencyDialogOverride(true);
-    if (poolFormState.addTokenAmount.isZero()) return;
+    // if (poolFormState.addTokenAmount.isZero()) return;
     if (loading) return;
 
     clearApproveError();
 
     runAddSponsor(async () => {
       const tokenAddress = poolToken.address;
-      const { addTokenAmount, addZilAmount } = poolFormState;
-      const { slippage } = swapFormState;
+      const { addZilAmount } = poolFormState;
       const tokenBalance = strings.bnOrZero(poolToken!.balance).shiftedBy(-poolToken.decimals);
+
       // const husdToken = tokenState.tokens[HUSD_ADDRESS];
       const zilBalance = strings.bnOrZero(husdToken!.balance).shiftedBy(-husdToken.decimals);
 
-      if (addTokenAmount.gt(tokenBalance)) {
-        throw new Error(`Insufficient ${poolToken.symbol} balance.`)
-      }
 
       if (addZilAmount.gt(zilBalance)) {
         throw new Error(`Insufficient ZIL balance.`)
@@ -219,11 +216,9 @@ const SponsorDeposit: React.FC<React.HTMLAttributes<HTMLDivElement>> = (props: a
 
       ZilswapConnector.setDeadlineBlocks(swapFormState.expiry);
 
-      const observedTx = await ZilswapConnector.addLiquidity({
-        tokenAmount: addTokenAmount.shiftedBy(poolToken.decimals),
-        zilAmount: addZilAmount.shiftedBy(husdToken.decimals),
+      const observedTx = await ZilswapConnector.addSponsor({
         tokenID: tokenAddress,
-        maxExchangeRateChange: toBasisPoints(slippage).toNumber(),
+        zilAmount: addZilAmount.shiftedBy(husdToken.decimals),
       });
       const walletObservedTx: WalletObservedTx = {
         ...observedTx,
@@ -249,11 +244,12 @@ const SponsorDeposit: React.FC<React.HTMLAttributes<HTMLDivElement>> = (props: a
     clearPoolError();
 
     runApproveTx(async () => {
-      const tokenAddress = poolToken.address;
-      const { addTokenAmount } = poolFormState;
+      const husdAddress = husdToken.address;
+      const { addZilAmount } = poolFormState;
       const observedTx = await ZilswapConnector.approveTokenTransfer({
-        tokenAmount: addTokenAmount.plus(BIG_ONE).shiftedBy(poolToken!.decimals),
-        tokenID: tokenAddress,
+        tokenAmount: addZilAmount.shiftedBy(poolToken!.decimals),
+        tokenID: husdAddress, 
+	spenderAddress: launcherContractAddress
       });
       const walletObservedTx: WalletObservedTx = {
         ...observedTx!,
@@ -280,23 +276,11 @@ const SponsorDeposit: React.FC<React.HTMLAttributes<HTMLDivElement>> = (props: a
 
   let showTxApprove = false;
   if (poolToken) {
-    const addTokenUnitlessAmount = poolFormState.addTokenAmount.shiftedBy(poolToken.decimals);
-    showTxApprove = strings.bnOrZero(husdToken.allowances?.[byte20ContractAddress]).comparedTo(addTokenUnitlessAmount) < 0
+    const addHusdUnitlessAmount = poolFormState.addZilAmount.shiftedBy(husdToken.decimals);
+    showTxApprove = strings.bnOrZero(husdToken.allowances?.[byte20ContractAddress]).comparedTo(addHusdUnitlessAmount) < 0
   }
 
   let contentTxApprove = "TOKEN APPR."
-
-  console.log("+++++++++++++ TEST ++++++++++++");
-  console.log("+++++++++++++ TEST ++++++++++++");
-  console.log("+++++++++++++ TEST ++++++++++++");
-  console.log(poolToken!);
-  console.log(showTxApprove);
-  console.log(loadingApproveTx);
-  console.log(onApproveTx);
-  console.log("+++++++++++++ TEST ++++++++++++");
-  console.log("+++++++++++++ TEST ++++++++++++");
-  console.log("+++++++++++++ TEST ++++++++++++");
-  console.log("+++++++++++++ TEST ++++++++++++");
 
   return (
     <Box display="flex" flexDirection="column" {...rest} className={clsx(classes.root, className)}>
