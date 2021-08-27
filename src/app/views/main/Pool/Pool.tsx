@@ -1,4 +1,4 @@
-import { Box, Button, IconButton, } from "@material-ui/core";
+import { Box, IconButton, } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { Notifications, ShowAdvanced } from "app/components";
 import MainCard from "app/layouts/MainCard";
@@ -9,7 +9,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { CreatePoolDialog, NewPoolMessage, PoolDeposit, PoolManage, PoolToggleButton, PoolWithdraw, SponsorDeposit, SponsorWithdraw } from "./components";
 import AddLiquidityEarnMessage from "./components/AddLiquidityEarnMessage";
-import { ReactComponent as PlusSVG } from "./plus_icon.svg";
+// import { ReactComponent as PlusSVG } from "./plus_icon.svg";
 import BrightnessLowIcon from '@material-ui/icons/BrightnessLowRounded';
 import { AppTheme } from "app/theme/types";
 

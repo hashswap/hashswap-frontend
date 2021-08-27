@@ -1,20 +1,22 @@
-import { Box, Button, Paper } from "@material-ui/core";
+import { Box, Paper } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import { TokenGraph } from "app/components";
-import { actions } from "app/store";
-import { LayoutState, RootState, SwapFormState, TokenInfo, TransactionState } from "app/store/types";
+// import { TokenGraph } from "app/components";
+// import { actions } from "app/store";
+// import { LayoutState, RootState, SwapFormState, TokenInfo, TransactionState } from "app/store/types";
+// import { RootState, SwapFormState } from "app/store/types";
 import { AppTheme } from "app/theme/types";
-import cls from "classnames";
+// import cls from "classnames";
 import { PaperProps } from "material-ui";
-import React, { forwardRef, Fragment, useEffect, useRef, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { NavLink as RouterLink, useRouteMatch } from "react-router-dom";
+import React, { Fragment, useRef } from "react";
+// import { useDispatch, useSelector } from "react-redux";
+// import { NavLink as RouterLink, useRouteMatch } from "react-router-dom";
 
-const CustomRouterLink = forwardRef((props: any, ref: any) => (
+/* const CustomRouterLink = forwardRef((props: any, ref: any) => (
   <div ref={ref} style={{ flexGrow: 1, flexBasis: 1 }} >
     <RouterLink {...props} />
   </div>
 ));
+*/
 
 const CARD_BORDER_RADIUS = 12;
 
@@ -112,24 +114,26 @@ const useStyles = makeStyles((theme: AppTheme) => ({
 const MainCard: React.FC<PaperProps> = (props: any) => {
   const { children, className, staticContext, ...rest } = props;
   const classes = useStyles();
-  const isPool = useRouteMatch("/pool");
-  const isSwap = useRouteMatch("/swap");
-  const layoutState = useSelector<RootState, LayoutState>(state => state.layout);
-  const swapState = useSelector<RootState, SwapFormState>(state => state.swap);
-  const poolToken = useSelector<RootState, TokenInfo | null>(state => state.pool.token);
-  const transactionState = useSelector<RootState, TransactionState>(state => state.transaction);
+  // const isPool = useRouteMatch("/pool");
+  // const isSwap = useRouteMatch("/swap");
+  // const layoutState = useSelector<RootState, LayoutState>(state => state.layout);
+  // const swapState = useSelector<RootState, SwapFormState>(state => state.swap);
+  // const poolToken = useSelector<RootState, TokenInfo | null>(state => state.pool.token);
+  // const transactionState = useSelector<RootState, TransactionState>(state => state.transaction);
   const boxRef = useRef<HTMLDivElement | null>(null);
-  const [boxHeight, setBoxHeight] = useState<number>(0);
-  const dispatch = useDispatch();
+  //const [boxHeight, setBoxHeight] = useState<number>(0);
+  // const dispatch = useDispatch();
 
-  useEffect(() => {
+	/* 
+	useEffect(() => {
     if(boxRef.current?.clientHeight) {
       setBoxHeight(boxRef.current?.clientHeight || 0);
     }
       // eslint-disable-next-line
   }, [boxRef.current?.clientHeight])
+*/
 
-  const hasNotification =
+/*  const hasNotification =
     // show new pool warning
     ((isPool && poolToken && !poolToken?.pool) ||
 
@@ -156,6 +160,7 @@ const MainCard: React.FC<PaperProps> = (props: any) => {
   const closeAdvancedSetting = () => {
     dispatch(actions.Layout.showAdvancedSetting(false));
   }
+*/
 
   return (
     <Fragment>

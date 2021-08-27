@@ -1,10 +1,11 @@
 // import { AppBar, Box, IconButton, Toolbar } from "@material-ui/core";
-import { AppBar, Box, Button, Paper, Toolbar } from "@material-ui/core";
+import { AppBar, Box, Toolbar } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { Brand } from "app/components/TopBar/components";
 // import RewardsInfoButton from "app/layouts/RewardsInfoButton";
 import cls from "classnames";
-import React, { forwardRef, Fragment, useEffect, useRef, useState } from "react";
+import React from "react";
+// import React, { forwardRef, Fragment, useEffect, useRef, useState } from "react";
 import ConnectWalletButton from "../ConnectWalletButton";
 import ThemeSwitch from "../ThemeSwitch";
 // import { ReactComponent as MenuIcon } from "./menu.svg";
