@@ -66,7 +66,8 @@ export const STATS_REFRESH_RATE = 30000; // ms
 export const ETH_ADDRESS = "0x0000000000000000000000000000000000000000";
 export const ZIL_ADDRESS = "zil1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq9yf6pz";
 export const ZIL_DECIMALS = 12;
-export const HUSD_ADDRESS = "zil1zlk9fgkmn3kcfnqywrdhg5hnmynmakcjmx6sw5";
+export const HUSD_ADDRESS = "zil1r7zq4xrd4nncm65j2vthljar2kv284qnp2qp7a";
+export const HASH_ADDRESS = "zil12428ahc06xvlsjgazfgp7lmqs459ja0dn268t3";
 
 export const TRANSAK_API_KEY = {
   DEVELOPMENT: process.env.REACT_APP_TRANSAK_DEV,

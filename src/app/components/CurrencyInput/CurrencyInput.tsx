@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   currencyButton: {
     display: "flex",
     justifyContent: "space-between",
-    fontFamily: 'Avenir Next',
+    fontFamily: 'Texta',
     fontWeight: 'bold',
     borderRadius: 12,
     padding: "34px 18px 12px 5px",
@@ -78,26 +78,26 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   maxButton: {
     display: "flex",
     padding: "34px 0px 12px 5px",
-    color: theme.palette.type === "dark" ? "#003340" : "#DEFFFF",
+    color: theme.palette.type === "dark" ? "#b14887" : "#DEFFFF",
     "& .MuiButton-label": {
       width: "inherit",
       padding: "2px 4px",
-      backgroundColor: `rgba${hexToRGBA(theme.palette.type === "dark" ? "#00FFB0" : "#003340", 0.75)}`,
+      backgroundColor: `rgba${hexToRGBA(theme.palette.type === "dark" ? "#00FFB0" : "#b14887", 0.75)}`,
       borderRadius: 5,
       "& .MuiTypography-root": {
         fontWeight: "bold"
       },
       "&:hover": {
-        backgroundColor: `rgba${hexToRGBA(theme.palette.type === "dark" ? "#00FFB0" : "#003340", 0.5)}`,
+        backgroundColor: `rgba${hexToRGBA(theme.palette.type === "dark" ? "#00FFB0" : "#b14887", 0.5)}`,
       },
     },
     "&:hover": {
       backgroundColor: "transparent",
     },
     "&.Mui-disabled": {
-      color: theme.palette.type === "dark" ? "#003340" : "#DEFFFF",
+      color: theme.palette.type === "dark" ? "#b14887" : "#DEFFFF",
       "& .MuiButton-label": {
-        backgroundColor: `rgba${hexToRGBA(theme.palette.type === "dark" ? "#00FFB0" : "#003340", 0.4)}`,
+        backgroundColor: `rgba${hexToRGBA(theme.palette.type === "dark" ? "#00FFB0" : "#b14887", 0.4)}`,
       }
     }
   }

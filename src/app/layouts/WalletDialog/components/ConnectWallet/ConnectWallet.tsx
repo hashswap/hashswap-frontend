@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     color: theme.palette.colors.zilliqa.neutral[theme.palette.type === "light" ? "200" : "100"],
   },
   link: {
-    color: theme.palette.type === "dark" ? "#00FFB0" : "#003340",
+    color: theme.palette.type === "dark" ? "#00FFB0" : "#b14887",
   },
   rounded: {
     borderRadius: "12px",
@@ -77,7 +77,7 @@ const ConnectWallet: React.FC<ConnectWalletProps & React.HTMLAttributes<HTMLDivE
             <Typography variant="body2" className={classes.notificationMessage}>
               To access your liquidity pools, please connect to ZilSwap via a ZilPay wallet.
               <br />
-              Click <Link style={{ color: theme.palette.type === "dark" ? "#00FFB0" : "#003340" }} href="https://docs.zilswap.io/more/help/use-zilpay-on-zilswap" target="_blank" >here</Link> to learn more.
+              Click <Link style={{ color: theme.palette.type === "dark" ? "#00FFB0" : "#b14887" }} href="https://docs.zilswap.io/more/help/use-zilpay-on-zilswap" target="_blank" >here</Link> to learn more.
             </Typography>
           </Box>
         </NotificationBox>

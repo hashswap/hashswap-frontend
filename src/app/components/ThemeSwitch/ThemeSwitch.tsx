@@ -20,10 +20,10 @@ const useStyles = makeStyles((theme: AppTheme) => ({
       },
     },
     "& .Mui-checked+.MuiSwitch-track": {
-      backgroundColor: `rgba${hexToRGBA("#003340", 0.5)}`,
+      backgroundColor: `rgba${hexToRGBA("#b14887", 0.5)}`,
     },
     "& .MuiSwitch-thumb": {
-      backgroundColor: theme.palette.type === "dark" ? "#0D1B24" : "#003340",
+      backgroundColor: theme.palette.type === "dark" ? "#0D1B24" : "#b14887",
       width: 14,
       height: 14,
     },
@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   label: {
     marginLeft: theme.spacing(1),
     marginRight: 0,
-    color: theme.palette.type === "dark" ? `rgba${hexToRGBA("#DEFFFF", 0.5)}` : "#003340"
+    color: theme.palette.type === "dark" ? `rgba${hexToRGBA("#DEFFFF", 0.5)}` : "#b14887"
   },
 }));
 

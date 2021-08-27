@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     alignItems: "flex-end"
   },
   buttonLeafActive: {
-    boxShadow: theme.palette.type === "dark" ? "inset 5px 0 0 #00FFB0" : "inset 5px 0 0 #003340"
+    boxShadow: theme.palette.type === "dark" ? "inset 5px 0 0 #00FFB0" : "inset 5px 0 0 #b14887"
   },
   highlightTitle: {
     color: theme.palette.type === "dark" ? "#00FFB0" : ""
@@ -58,14 +58,14 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   icon: {
     marginRight: "12px",
     "& path": {
-      fill: theme.palette.type === "dark" ? "#00FFB0" : "#003340"
+      fill: theme.palette.type === "dark" ? "#00FFB0" : "#b14887"
     }
   },
   expandedList: {
-    backgroundColor: theme.palette.type === "dark" ? "rgba(222, 255, 255, 0.1)" : "#F6FFFC"
+    backgroundColor: theme.palette.type === "dark" ? "rgba(222, 255, 255, 0.1)" : "#ffffff"
   },
   textColoured: {
-    color: theme.palette.type === "dark" ? "#00FFB0" : "#003340"
+    color: theme.palette.type === "dark" ? "#00FFB0" : "#b14887"
   }
 }))
 

@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   card: {
     maxWidth: 488,
     margin: "0 auto",
-    background: theme.palette.type === "dark" ? "linear-gradient(#13222C, #002A34)" : "#F6FFFC",
+    background: theme.palette.type === "dark" ? "linear-gradient(#13222C, #002A34)" : "#ffffff",
     border: theme.palette.type === "dark" ? "1px solid #29475A" : "1px solid #D2E5DF",
     boxShadow: theme.palette.mainBoxShadow,
     borderRadius: CARD_BORDER_RADIUS,
@@ -160,6 +160,7 @@ const MainCard: React.FC<PaperProps> = (props: any) => {
   return (
     <Fragment>
       <Box className={classes.root}>
+    {/*
         <Box display="flex" justifyContent="center">
           <Box className={classes.tabs}>
             <Button
@@ -190,10 +191,8 @@ const MainCard: React.FC<PaperProps> = (props: any) => {
               to="/bridge">Bridge</Button>
           </Box>
         </Box>
+	*/}
         <Box display="flex" justifyContent="center">
-          {showGraph && (
-            <TokenGraph boxHeight={boxHeight} inToken={swapState.inToken} outToken={swapState.outToken} />
-          )}
           <Box width={488}>
             <Paper {...{ ref:boxRef }} {...rest} className={classes.card}>
               <Box>{children}</Box>

@@ -1,10 +1,10 @@
 import { Box, BoxProps } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { HelpInfo, KeyValueDisplay } from "app/components";
-import { RootState, SwapFormState, TokenInfo } from "app/store/types";
+import { RootState, SwapFormState, TokenState, TokenInfo } from "app/store/types";
 import { AppTheme } from "app/theme/types";
 import { useMoneyFormatter } from "app/utils";
-import { BIG_ONE, BIG_ZERO } from "app/utils/constants";
+import { BIG_ONE, BIG_ZERO, HASH_ADDRESS } from "app/utils/constants";
 import cls from "classnames";
 import { ZilswapConnector } from "core/zilswap";
 import React, { useState } from "react";
@@ -56,6 +56,7 @@ const SwapDetail: React.FC<SwapDetailProps> = (props: SwapDetailProps) => {
   const { children, className, token, ...rest } = props;
   const classes = useStyles();
   const { inAmount, inToken, outAmount, outToken, expectedExchangeRate, expectedSlippage } = useSelector<RootState, SwapFormState>(store => store.swap);
+  const tokenState = useSelector<RootState, TokenState>(store => store.token);
   const moneyFormat = useMoneyFormatter({ maxFractionDigits: 5, showCurrency: true });
   const [reversedRate, setReversedRate] = useState(false);
   
@@ -95,6 +96,8 @@ const SwapDetail: React.FC<SwapDetailProps> = (props: SwapDetailProps) => {
       src = outToken;
     }
 
+    const zilPrice = tokenState.prices["ZIL"];
+
     if (exchangeRate.eq(0)) {
       try {
         const rateResult = ZilswapConnector.getExchangeRate({
@@ -105,6 +108,12 @@ const SwapDetail: React.FC<SwapDetailProps> = (props: SwapDetailProps) => {
         });
         if (!rateResult.expectedAmount.isNaN() && !rateResult.expectedAmount.isNegative())
           exchangeRate = rateResult.expectedAmount.shiftedBy(-dst!.decimals).pow(reversedRate ? -1 : 1);
+
+	if(inToken!.address === HASH_ADDRESS){ exchangeRate = exchangeRate.multipliedBy(zilPrice); }
+	if(outToken!.address === HASH_ADDRESS){ exchangeRate = exchangeRate.dividedBy(zilPrice); }
+
+
+
       } catch (e) {
         exchangeRate = BIG_ZERO;
       }

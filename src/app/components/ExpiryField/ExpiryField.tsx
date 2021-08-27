@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     width: 60,
     marginRight: theme.spacing(1),
     textAlign: "center",
-    backgroundColor: theme.palette.type === "dark" ? "#0D1B24" : "#D4FFF2",
+    backgroundColor: theme.palette.type === "dark" ? "#0D1B24" : "#dbe3ef",
     borderRadius: "12px",
     border: `1px solid ${theme.palette.type === "dark" ? "#29475A" : "transparent"}`,
   },

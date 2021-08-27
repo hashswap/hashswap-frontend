@@ -14,8 +14,8 @@ const useStyles = makeStyles(theme => ({
   percentageButton: {
     borderRadius: 5,
     padding: '3px 7px',
-    color: theme.palette.type === "dark" ? "rgba(222, 255, 255, 0.5)" : "#003340",
-    backgroundColor: theme.palette.type === "dark" ? "rgba(222, 255, 255, 0.1)" : "#D4FFF2",
+    color: theme.palette.type === "dark" ? "rgba(222, 255, 255, 0.5)" : "#b14887",
+    backgroundColor: theme.palette.type === "dark" ? "rgba(222, 255, 255, 0.1)" : "#dbe3ef",
     border: 0,
     margin: '4px 5px',
     [theme.breakpoints.down("sm")]: {

@@ -80,7 +80,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     flexDirection: "column",
     alignItems: "center",
     borderRadius: 12,
-    backgroundColor: theme.palette.type === "dark" ? `rgba${hexToRGBA("#DEFFFF", 0.1)}` : `rgba${hexToRGBA("#003340", 0.05)}`,
+    backgroundColor: theme.palette.type === "dark" ? `rgba${hexToRGBA("#DEFFFF", 0.1)}` : `rgba${hexToRGBA("#b14887", 0.05)}`,
     padding: theme.spacing(1),
     overflow: "auto",
   },
@@ -119,7 +119,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     borderRadius: "12px",
     boxShadow: "none",
     border: "none",
-    backgroundColor: theme.palette.type === "dark" ? `rgba${hexToRGBA("#DEFFFF", 0.1)}` : `rgba${hexToRGBA("#003340", 0.05)}`,
+    backgroundColor: theme.palette.type === "dark" ? `rgba${hexToRGBA("#DEFFFF", 0.1)}` : `rgba${hexToRGBA("#b14887", 0.05)}`,
     "& .MuiIconButton-root": {
       padding: 0,
       marginRight: 0

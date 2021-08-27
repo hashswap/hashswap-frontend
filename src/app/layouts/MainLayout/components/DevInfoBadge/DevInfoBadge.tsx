@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   chip: {
     borderColor: theme.palette.type === "dark" ? "#29475A" : "#D2E5DF",
     "& .MuiChip-avatarColorPrimary": {
-      backgroundColor: theme.palette.type === "dark" ? "rgba(222, 255, 255, 0.1)" : "#003340",
+      backgroundColor: theme.palette.type === "dark" ? "rgba(222, 255, 255, 0.1)" : "#b14887",
     },
     "& .MuiChip-label": {
       color: theme.palette.text?.primary

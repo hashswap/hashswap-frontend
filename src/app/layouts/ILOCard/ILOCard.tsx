@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     margin: "0 auto",
     boxShadow: theme.palette.mainBoxShadow,
     borderRadius: CARD_BORDER_RADIUS,
-    background: theme.palette.type === "dark" ? "linear-gradient(#13222C, #002A34)" : "#F6FFFC",
+    background: theme.palette.type === "dark" ? "linear-gradient(#13222C, #002A34)" : "#ffffff",
     border: theme.palette.type === "dark" ? "1px solid #29475A" : "1px solid #D2E5DF",
     [theme.breakpoints.down("sm")]: {
       maxWidth: 450,

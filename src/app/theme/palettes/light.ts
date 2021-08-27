@@ -2,7 +2,7 @@ import { colors } from '@material-ui/core';
 import { zilliqa, switcheo } from './colors';
 
 const TEXT_COLORS = {
-  primary: "#003340",
+  primary: "#000000",
   secondary: "rgba(0, 51, 64, 0.5)",
 };
 
@@ -13,8 +13,8 @@ const theme = {
   },
   primary: {
     contrastText: "#000",
-    dark: "#003340",
-    main: "#003340",
+    dark: "#000000",
+    main: "#000000",
     light: "rgba(0, 51, 64, 0.5)",
   },
   error: {
@@ -38,23 +38,23 @@ const theme = {
     primary: "#02586D",
   },
   background: {
-    default: "#F6FFFC",
-    gradient: "#fafafa",
-    contrast: "#D4FFF2",
-    contrastAlternate: "#F6FFFC",
+    default: "#ffffff",
+    gradient: "#596f90",
+    contrast: "#dbe3ef",
+    contrastAlternate: "#ffffff",
     paper: zilliqa.neutral[100],
     paperOpposite: zilliqa.neutral[190],
-    tooltip: "#F6FFFC",
+    tooltip: "#ffffff",
     readOnly: zilliqa.primary["004"]
   },
   action: {
-    active: "#003340",
+    active: "#b14887",
     disabled: "rgba(222, 255, 255, 0.5)",
     disabledBackground: "rgba(0, 51, 64, 0.5)",
-    selected: "#003340"
+    selected: "#b14887"
   },
   tab: {
-    active: "#003340",
+    active: "#b14887",
     disabled: "rgba(222, 255, 255, 0.5)",
     disabledBackground: "#7B999E",
     selected: "#DEFFFF"
@@ -64,9 +64,9 @@ const theme = {
   navbar: "#DEFFF5",
   switcheoLogo: switcheo.logoLight,
   colors: { zilliqa, switcheo },
-  currencyInput: "#D4FFF2",
-  icon: "#003340",
-  label: "#003340",
+  currencyInput: "#dbe3ef",
+  icon: "#b14887",
+  label: "#000000",
   warning: {
     main: "#FF5252"
   },

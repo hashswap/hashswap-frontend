@@ -39,11 +39,11 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     paddingTop: theme.spacing(2),
     paddingBottom: theme.spacing(2),
     borderRadius: "12px 12px 0 0",
-    backgroundColor: theme.palette.type === "dark" ? "#13222C" : "#003340",
+    backgroundColor: theme.palette.type === "dark" ? "#13222C" : "#b14887",
     color: theme.palette.tab.selected,
     border: theme.palette.type === "dark" ? "1px solid #29475A" : "1px solid #D2E5DF",
     "&:hover": {
-      backgroundColor: theme.palette.type === "dark" ? "" : `rgba${hexToRGBA("#003340", 0.8)}`
+      backgroundColor: theme.palette.type === "dark" ? "" : `rgba${hexToRGBA("#b14887", 0.8)}`
     }
   },
   mobileButtonConnected: {
@@ -51,12 +51,12 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     paddingTop: theme.spacing(2),
     paddingBottom: theme.spacing(2),
     borderRadius: "12px 12px 0 0",
-    backgroundColor: theme.palette.type === "dark" ? "#13222C" : "#003340",
+    backgroundColor: theme.palette.type === "dark" ? "#13222C" : "#b14887",
     color: theme.palette.tab.selected,
     border: theme.palette.type === "dark" ? "1px solid #29475A" : "1px solid #D2E5DF",
     justifyContent: "space-between",
     "&:hover": {
-      backgroundColor: theme.palette.type === "dark" ? "" : `rgba${hexToRGBA("#003340", 0.8)}`
+      backgroundColor: theme.palette.type === "dark" ? "" : `rgba${hexToRGBA("#b14887", 0.8)}`
     }
   },
   dotIcon: {

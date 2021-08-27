@@ -81,9 +81,9 @@ const PoolView: React.FC<React.HTMLAttributes<HTMLDivElement>> = (props: any) =>
           {poolType !== "remove" && (
             <Box display="flex" justifyContent="space-between" mb="28px" className={classes.container}>
               <PoolToggleButton />
-              <Button className={classes.createButton} startIcon={<PlusSVG className={classes.plusIcon}/>} onClick={() => onShowCreatePool("open")}>
+	  {/* <Button className={classes.createButton} startIcon={<PlusSVG className={classes.plusIcon}/>} onClick={() => onShowCreatePool("open")}>
                 Create Pool
-            </Button>
+            </Button> */}
             </Box>
           )}
           {poolType === "add" && (

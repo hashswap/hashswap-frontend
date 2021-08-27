@@ -15,7 +15,7 @@ const theme = {
   primary: {
     contrastText: "#DEFFFF",
     dark: "#00FFB0",
-    main: "#003340",
+    main: "#000000",
     light: "rgba(222, 255, 255, 0.5)",
   },
   error: {
@@ -51,7 +51,7 @@ const theme = {
   action: {
     active: "#13222C",
     disabled: "rgba(222, 255, 255, 0.5)",
-    disabledBackground: "#003340",
+    disabledBackground: "#b14887",
     selected: "#00FFB0"
   },
   tab: {

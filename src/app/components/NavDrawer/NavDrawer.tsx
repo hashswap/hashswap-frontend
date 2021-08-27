@@ -72,7 +72,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     padding: "0px 22px",
     justifyContent: 'flex-start',
     minHeight: "49px",
-    borderBottom: theme.palette.type === "dark" ? "1px solid #003340" : "1px solid transparent",
+    borderBottom: theme.palette.type === "dark" ? "1px solid #b14887" : "1px solid transparent",
     backgroundColor: theme.palette.toolbar.main
   },
   price: {

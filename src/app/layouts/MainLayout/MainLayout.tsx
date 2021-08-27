@@ -38,9 +38,21 @@ const MainLayout: React.FC<React.HTMLAttributes<HTMLDivElement>> = (props: any) 
     setShowDrawer(typeof override === "boolean" ? override : !showDrawer);
   };
 
+  console.log("+++++++ MAIN LAYOUT -++++++++");
+  console.log("+++++++ MAIN LAYOUT -++++++++");
+  console.log("+++++++ MAIN LAYOUT -++++++++");
+  console.log("+++++++ MAIN LAYOUT -++++++++");
+  console.log("+++++++ MAIN LAYOUT -++++++++");
+  console.log(route.routes);
+  console.log("+++++++ MAIN LAYOUT -++++++++");
+  console.log("+++++++ MAIN LAYOUT -++++++++");
+  console.log("+++++++ MAIN LAYOUT -++++++++");
+  console.log("+++++++ MAIN LAYOUT -++++++++");
+  console.log("+++++++ MAIN LAYOUT -++++++++");
+
   return (
     <Box className={classes.root}>
-      <TopBar onToggleDrawer={onToggleDrawer} />
+      <TopBar onToggleDrawer={onToggleDrawer} currentRoute={route} />
       <main className={classes.content}>
     {/*        <DevInfoBadge />     */}
         <Suspense fallback={<LinearProgress />}>

@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   root: {
   },
   banner: {
-    background: theme.palette.type === "dark" ? "linear-gradient(#13222C, #002A34)" : "#F6FFFC",
+    background: theme.palette.type === "dark" ? "linear-gradient(#13222C, #002A34)" : "#ffffff",
     border: theme.palette.type === "dark" ? "1px solid #29475A" : "1px solid #D2E5DF",
     padding: theme.spacing(4, 4),
     borderRadius: 12,

@@ -1,5 +1,6 @@
 import { fromBech32Address } from "@zilliqa-js/crypto";
-import { BIG_ZERO } from "app/utils/constants";
+// import { BIG_ZERO } from "app/utils/constants";
+import { BIG_ZERO, HASH_ADDRESS } from "app/utils/constants";
 import BigNumber from "bignumber.js";
 // import { ObservedTx, Zilswap } from "hashswap-zilliqa-js-sdk";
 import { ObservedTx } from "hashswap-zilliqa-js-sdk";
@@ -323,9 +324,27 @@ export class ZilswapConnector {
    */
   static swap = async (props: SwapProps) => {
     if (!zilswap) throw new Error('not initialized');
-    const swapFunction = props.exactOf === "in" ?
+    
+      
+    let swapFunction = props.exactOf === "in" ?
       zilswap.swapWithExactInput.bind(zilswap) :
       zilswap.swapWithExactOutput.bind(zilswap);
+    
+    console.log("TEST1731");
+    console.log("TEST1731");
+    console.log("TEST1731");
+    console.log(props.tokenOutID);
+    console.log(HASH_ADDRESS);
+    console.log(props.tokenInID);
+    console.log("TEST1731");
+    console.log("TEST1731");
+    console.log("TEST1731");
+    if (props.tokenInID === HASH_ADDRESS || props.tokenOutID === HASH_ADDRESS){ 
+      console.log("TEST INSIDEEEE");
+      swapFunction = zilswap.swapHashHusd.bind(zilswap); }
+  
+  
+    console.log(swapFunction);
 
     logger(props.exactOf);
     logger(props.tokenInID);

@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     margin: "0 auto",
     boxShadow: theme.palette.mainBoxShadow,
     borderRadius: 12,
-    background: theme.palette.type === "dark" ? "linear-gradient(#13222C, #002A34)" : "#F6FFFC",
+    background: theme.palette.type === "dark" ? "linear-gradient(#13222C, #002A34)" : "#ffffff",
     border: theme.palette.type === "dark" ? "1px solid #29475A" : "1px solid #D2E5DF",
     [theme.breakpoints.down("sm")]: {
       maxWidth: 450,
@@ -86,7 +86,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     flexDirection: "column",
     alignItems: "center",
     borderRadius: 12,
-    backgroundColor: theme.palette.type === "dark" ? `rgba${hexToRGBA("#DEFFFF", 0.1)}` : `rgba${hexToRGBA("#003340", 0.05)}`,
+    backgroundColor: theme.palette.type === "dark" ? `rgba${hexToRGBA("#DEFFFF", 0.1)}` : `rgba${hexToRGBA("#b14887", 0.05)}`,
     padding: theme.spacing(1),
     overflow: "auto",
   },
@@ -125,7 +125,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     borderRadius: "12px",
     boxShadow: "none",
     border: "none",
-    backgroundColor: theme.palette.type === "dark" ? `rgba${hexToRGBA("#DEFFFF", 0.1)}` : `rgba${hexToRGBA("#003340", 0.05)}`,
+    backgroundColor: theme.palette.type === "dark" ? `rgba${hexToRGBA("#DEFFFF", 0.1)}` : `rgba${hexToRGBA("#b14887", 0.05)}`,
     "& .MuiIconButton-root": {
       padding: 0,
       marginRight: 0

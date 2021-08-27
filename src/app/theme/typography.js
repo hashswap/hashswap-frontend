@@ -1,6 +1,6 @@
 const typography = (palette) => ({
   fontFamily: [
-    "Roboto"
+    "Futura"
   ].join(","),
   h1: {
     fontSize: "26px",
@@ -9,8 +9,8 @@ const typography = (palette) => ({
     letterSpacing: "-0.2px",
   },
   h2: {
-    fontFamily: "Avenir Next",
-    fontWeight: "bold",
+    fontFamily: "Texta",
+    fontWeight: "normal",
     fontSize: 26,
   },
   h3: {
@@ -20,15 +20,15 @@ const typography = (palette) => ({
     letterSpacing: "-0.2px",
   },
   h4: {
-    fontFamily: "Avenir Next",
-    fontSize: "16px",
-    lightHeight: "18px",
-    fontWeight: 500
+    fontFamily: "Texta",
+    fontSize: "20px",
+    lightHeight: "22px",
+    fontWeight: "normal",
   },
   h5: {
   },
   h6: {
-    fontFamily: "Roboto",
+    fontFamily: "Futura",
     fontWeight: 600,
     fontSize: "14px"
   },
@@ -44,10 +44,10 @@ const typography = (palette) => ({
     letterSpacing: 0,
   },
   body1: {
-    fontFamily: "Avenir Next",
-    fontSize: "12px",
+    fontFamily: "Texta",
+    fontSize: "15px",
     lineHeight: "14px",
-    fontWeight: 600,
+    fontWeight: "normal",
     letterSpacing: 0,
   },
   body2: {
@@ -57,10 +57,11 @@ const typography = (palette) => ({
     fontWeight: 500
   },
   button: {
-    fontFamily: "Avenir Next",
-    fontSize: "16px",
-    fontWeight: 600,
-    lineHeight: "18px",
+    fontFamily: "Texta",
+    fontSize: "20px",
+    fontWeight: "bold",
+    lineHeight: "20px",
+    letterSpacing: "1px",
     textTransform: "none",
   },
   caption: {

@@ -14,7 +14,7 @@ const useStyles = makeStyles(theme => ({
   root: {
   },
   box: {
-    backgroundColor: theme.palette.type === "dark" ? "rgba(222, 255, 255, 0.1)" : "#D4FFF2",
+    backgroundColor: theme.palette.type === "dark" ? "rgba(222, 255, 255, 0.1)" : "#dbe3ef",
     border: "3px solid rgba(0, 255, 176, 0.2)",
     margin: "2px",
   },

@@ -29,13 +29,13 @@ const useStyles = makeStyles(theme => ({
       width: "100%",
     },
     "& .MuiDialogTitle-root": {
-      backgroundColor: theme.palette.type === "dark" ? "#12222C" : "#F6FFFC"
+      backgroundColor: theme.palette.type === "dark" ? "#12222C" : "#ffffff"
     },
   },
   input: {
-    backgroundColor: theme.palette.type === "dark" ? "#0D1B24" : "#D4FFF2",
+    backgroundColor: theme.palette.type === "dark" ? "#0D1B24" : "#dbe3ef",
     marginBottom: 20,
-    borderColor: theme.palette.type === "dark" ? "#29475A" : "#D4FFF2",
+    borderColor: theme.palette.type === "dark" ? "#29475A" : "#dbe3ef",
     '&.Mui-focused': {
       borderColor: theme.palette.primary.dark,
     },
@@ -73,7 +73,7 @@ const useStyles = makeStyles(theme => ({
     overflow: "hidden",
   },
   dialogContent: {
-    backgroundColor: theme.palette.type === "dark" ? "#12222C" : "#F6FFFC",
+    backgroundColor: theme.palette.type === "dark" ? "#12222C" : "#ffffff",
     borderBottom: theme.palette.type === "dark" ? "1px solid #29475A" : "1px solid #D2E5DF",
     borderLeft: theme.palette.type === "dark" ? "1px solid #29475A" : "1px solid #D2E5DF",
     borderRight: theme.palette.type === "dark" ? "1px solid #29475A" : "1px solid #D2E5DF",

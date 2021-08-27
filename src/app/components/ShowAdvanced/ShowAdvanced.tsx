@@ -41,8 +41,8 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     }
   },
   iconButton: {
-    color: theme.palette.type === "dark" ? "rgba(222, 255, 255, 0.5)" : "#003340",
-    backgroundColor: theme.palette.type === "dark" ? "rgba(222, 255, 255, 0.1)" : "#D4FFF2",
+    color: theme.palette.type === "dark" ? "rgba(222, 255, 255, 0.5)" : "#b14887",
+    backgroundColor: theme.palette.type === "dark" ? "rgba(222, 255, 255, 0.1)" : "#dbe3ef",
     borderRadius: 12,
     padding: 5,
     marginLeft: 5,

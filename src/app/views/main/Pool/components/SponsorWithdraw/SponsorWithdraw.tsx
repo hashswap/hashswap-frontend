@@ -113,7 +113,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     marginLeft: 5,
   },
   viewIcon: {
-    color: theme.palette.type === "dark" ? "#00FFB0" : `rgba${hexToRGBA("#003340", 0.5)}`,
+    color: theme.palette.type === "dark" ? "#00FFB0" : `rgba${hexToRGBA("#b14887", 0.5)}`,
     position: "absolute",
     top: "50%",
     left: "50%",

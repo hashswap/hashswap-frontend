@@ -8,13 +8,14 @@ import { useDispatch, useSelector } from "react-redux";
 
 const useStyles = makeStyles(theme => ({
   root: {
+    width: "100%",
   },
   tab: {
     borderRadius: 12,
-    width: 90,
+    width: "100%",
     padding: theme.spacing(1.5, 4),
     [theme.breakpoints.down("xs")]: {
-      width: 76,
+      width: "auto",
       padding: theme.spacing(1, 2),
       "& .MuiButton-label": {
         fontSize: "14px",
@@ -49,19 +50,19 @@ const PoolToggleButton: React.FC<ButtonGroupProps> = (props: ButtonGroupProps) =
         onClick={() => onTypeChange("add")}
         variant={poolType === "add" ? "contained" : "outlined"}
         className={classes.tab}>
-        Add
+        Pool Liquidity
       </Button>
-      <Button
+    {/* <Button
         onClick={() => onTypeChange("manage")}
         variant={poolType === "manage" ? "contained" : "outlined"}
         className={classes.tab}>
         Manage
-      </Button>
+      </Button> */}
       <Button
         onClick={() => onTypeChange("addSponsor")}
         variant={poolType === "addSponsor" ? "contained" : "outlined"}
         className={classes.tab}>
-    	Sponsor
+    	Pool Sponsor
       </Button>
     </ButtonGroup>
   );

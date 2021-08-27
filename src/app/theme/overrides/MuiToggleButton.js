@@ -1,10 +1,10 @@
 const MuiToggleButton = theme => ({
     root: {
         "&$selected": {
-            color: theme.palette.type === "dark" ? "#003340" : "#DEFFFF",
-            backgroundColor: theme.palette.type === "dark" ? "#00FFB0" : "#003340",
+            color: theme.palette.type === "dark" ? "#b14887" : "#DEFFFF",
+            backgroundColor: theme.palette.type === "dark" ? "#00FFB0" : "#b14887",
             "&:hover": {
-                backgroundColor: theme.palette.type === "dark" ? "#00FFB0" : "#003340",
+                backgroundColor: theme.palette.type === "dark" ? "#00FFB0" : "#b14887",
             }
         },
     },

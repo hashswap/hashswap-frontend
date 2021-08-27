@@ -68,7 +68,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
         color: theme.palette.action?.disabled,
         backgroundColor: theme.palette.action?.disabledBackground,
         "&:hover": {
-            backgroundColor: `rgba${hexToRGBA(theme.palette.type === "dark" ? "#003340" : "rgba(0, 51, 64, 0.5)", 0.8)}`,
+            backgroundColor: `rgba${hexToRGBA(theme.palette.type === "dark" ? "#b14887" : "rgba(0, 51, 64, 0.5)", 0.8)}`,
         },
     },
     textWhite: {
@@ -80,7 +80,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
             height: '0.4rem'
         },
         '&::-webkit-scrollbar-thumb': {
-            backgroundColor: `rgba${hexToRGBA(theme.palette.type === "dark" ? "#DEFFFF" : "#003340", 0.1)}`,
+            backgroundColor: `rgba${hexToRGBA(theme.palette.type === "dark" ? "#DEFFFF" : "#b14887", 0.1)}`,
             borderRadius: 12,
         },
         // if vertical scrollbar present

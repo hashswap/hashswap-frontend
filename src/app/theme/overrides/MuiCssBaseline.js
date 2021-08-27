@@ -11,6 +11,40 @@ import AvenirNextRegularWoff from "../fonts/AvenirNext-Regular.woff";
 import AvenirNextUltraLightWoff from "../fonts/AvenirNext-UltraLight.woff";
 import AvenirNextUltraLightItalicWoff from "../fonts/AvenirNext-UltraLightItalic.woff";
 
+import TextaMediumWebFont from "../fonts/new/Texta-Medium-webfont.woff";
+import TextaLightWebFont from "../fonts/new/Texta-Light-webfont.woff";
+import TextaHeavyWebFont from "../fonts/new/Texta-Heavy-webfont.woff";
+
+const Texta = {
+  fontFamily: '"Texta"',
+  fontStyle: 'normal',
+  fontDisplay: 'swap',
+}
+
+const TextaMedium = {
+  ...Texta,
+  fontWeight: 'normal',
+  src: `
+    url(${TextaMediumWebFont}) format('woff')
+  `,
+}
+
+const TextaLight = {
+  ...Texta,
+  fontWeight: 100,
+  src: `
+    url(${TextaLightWebFont}) format('woff')
+  `,
+}
+
+const TextaHeavy = {
+  ...Texta,
+  fontWeight: 'bold',
+  src: `
+    url(${TextaHeavyWebFont}) format('woff')
+  `,
+}
+
 const AvenirNext = {
   fontFamily: '"Avenir Next"',
   fontStyle: 'normal',
@@ -128,6 +162,9 @@ const MuiCssBaseline = () => ({
       AvenirNextRegular,
       AvenirNextUltraLight,
       AvenirNextUltraLightItalic,
+      TextaMedium,
+      TextaLight,
+      TextaHeavy,
     ],
   }
 });

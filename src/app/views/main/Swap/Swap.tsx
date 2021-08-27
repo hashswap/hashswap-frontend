@@ -2,7 +2,8 @@ import { Box, Button, IconButton, InputLabel, makeStyles, OutlinedInput, Typogra
 import { WarningRounded } from "@material-ui/icons";
 import AddIcon from "@material-ui/icons/Add";
 import AutorenewIcon from '@material-ui/icons/Autorenew';
-import BrightnessLowIcon from '@material-ui/icons/BrightnessLowRounded';
+// import BrightnessLowIcon from '@material-ui/icons/BrightnessLowRounded';
+import { ReactComponent as SettingsGearIcon } from "app/components/SvgIcons/setting-icon.svg";
 import RemoveIcon from "@material-ui/icons/RemoveRounded";
 import { fromBech32Address } from "@zilliqa-js/crypto";
 import { validation as ZilValidation } from "@zilliqa-js/util";
@@ -12,7 +13,7 @@ import { actions } from "app/store";
 import { ExactOfOptions, LayoutState, RootState, SwapFormState, TokenInfo, TokenState, WalletObservedTx, WalletState } from "app/store/types";
 import { AppTheme } from "app/theme/types";
 import { strings, useAsyncTask, useBlacklistAddress, useNetwork, useSearchParam, useToaster } from "app/utils";
-import { BIG_ONE, BIG_ZERO, PlaceholderStrings, HUSD_ADDRESS, ZIL_ADDRESS } from "app/utils/constants";
+import { BIG_ONE, BIG_ZERO, PlaceholderStrings, HUSD_ADDRESS, HASH_ADDRESS, ZIL_ADDRESS } from "app/utils/constants";
 import BigNumber from "bignumber.js";
 import cls from "classnames";
 import { toBasisPoints, ZilswapConnector } from "core/zilswap";
@@ -28,10 +29,20 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   root: {
   },
   container: {
-    padding: theme.spacing(2, 4, 2),
+    padding: theme.spacing(4, 4, 2),
     [theme.breakpoints.down("xs")]: {
       padding: theme.spacing(2, 2, 2),
     },
+  },
+  rowContainer: {
+    padding: 0,
+    width: "100%",
+    lineHeight: "initial",
+    fontSize: "2em",
+  },
+  panelName: {
+    flex: 1,
+    flexDirection: "row",
   },
   swapButton: {
     padding: 0,
@@ -162,8 +173,8 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     }
   },
   iconButton: {
-    color: theme.palette.type === "dark" ? "rgba(222, 255, 255, 0.5)" : "#003340",
-    backgroundColor: theme.palette.type === "dark" ? "rgba(222, 255, 255, 0.1)" : "#D4FFF2",
+    color: theme.palette.type === "dark" ? "rgba(222, 255, 255, 0.5)" : "#b14887",
+    backgroundColor: theme.palette.type === "dark" ? "rgba(222, 255, 255, 0.1)" : "#ffffff",
     borderRadius: 12,
     padding: 5,
     marginLeft: 5,
@@ -333,13 +344,17 @@ const Swap: React.FC<React.HTMLAttributes<HTMLDivElement>> = (props: any) => {
         expectedSlippage = 0;
         dstAmount = BIG_ZERO;
       } else {
-        const expectedAmountUnits = rateResult.expectedAmount.shiftedBy(-dstToken.decimals);
+	var expectedAmount = rateResult.expectedAmount;
+	const zilPrice = tokenState.prices["ZIL"];
+	if(_inToken!.address === HASH_ADDRESS){ expectedAmount = _exactOf === "in" ? expectedAmount.multipliedBy(zilPrice) : expectedAmount.dividedBy(zilPrice); }
+	if(_outToken!.address === HASH_ADDRESS){ expectedAmount = _exactOf === "in" ? expectedAmount.dividedBy(zilPrice) : expectedAmount.multipliedBy(zilPrice); }
+        const expectedAmountUnits = expectedAmount.shiftedBy(-dstToken.decimals);
         const srcAmountUnits = srcAmount.shiftedBy(-srcToken.decimals);
         expectedExchangeRate = expectedAmountUnits.div(srcAmountUnits).pow(_exactOf === "in" ? 1 : -1).abs();
 
         expectedSlippage = rateResult.slippage.shiftedBy(-2).toNumber();
 
-        dstAmount = rateResult.expectedAmount.shiftedBy(-dstToken?.decimals || 0).decimalPlaces(dstToken?.decimals || 0);
+        dstAmount = expectedAmount.shiftedBy(-dstToken?.decimals || 0).decimalPlaces(dstToken?.decimals || 0);
       }
     } else {
       expectedExchangeRate = BIG_ZERO;
@@ -550,7 +565,7 @@ const Swap: React.FC<React.HTMLAttributes<HTMLDivElement>> = (props: any) => {
 
   const { outToken, inToken } = swapFormState;
   let showTxApprove = false;
-  if (inToken && !inToken?.isZil) {
+  if (inToken && outToken && !inToken?.isZil && inToken.address !== HASH_ADDRESS && outToken.address !== HASH_ADDRESS) {
     const zilswapContractAddress = HEX[network];
     const byte20ContractAddress = fromBech32Address(zilswapContractAddress).toLowerCase();
     const unitlessInAmount = swapFormState.inAmount.shiftedBy(swapFormState.inToken!.decimals);
@@ -570,15 +585,20 @@ const Swap: React.FC<React.HTMLAttributes<HTMLDivElement>> = (props: any) => {
       <Notifications />
       {!layoutState.showAdvancedSetting && (
         <Box display="flex" flexDirection="column" className={classes.container}>
+
+        <Box display="flex" className={classes.rowContainer}>
+          <Box display="flex" className={classes.panelName} justifyContent="flex-start">
+            Swap
+	  </Box>
           <Box display="flex" justifyContent="flex-end" mb={1.5}>
             <IconButton onClick={() => toggleAdvanceSetting()} className={classes.iconButton}>
-              <BrightnessLowIcon />
+              <SettingsGearIcon />
             </IconButton>
-            <IconButton onClick={() => refreshRate()} className={classes.iconButton}>
+	<IconButton onClick={() => refreshRate()} className={classes.iconButton}>
               <AutorenewIcon />
             </IconButton>
           </Box>
-
+	</Box>
           <CurrencyInput
             label="From"
             token={inToken || null}
