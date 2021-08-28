@@ -13,16 +13,19 @@ export interface PoolIconProps extends React.HTMLAttributes<HTMLDivElement> {
 const useStyles = makeStyles((theme: AppTheme) => ({
   root: {
     borderRadius: 12,
-    margin: "16px auto",
-    height: 24,
-    width: 24,
-    padding: 6,
-    background: theme.palette.type === "dark" ? "#303637": "#F7FAFA",
+    margin: "0 auto", 
+    // margin: "16px auto",
+    height: 20,
+    width: 20,
+    padding: 0,
+    background: "none", 
+    // background: theme.palette.type === "dark" ? "#303637": "#F7FAFA",
   },
   icon: {
-    height: 12,
-    width: 12,
+    height: 20,
+    width: 20,
     "& path": {
+      stroke: "#000000",	    
       fill: theme.palette.icon
     }
   }

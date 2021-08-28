@@ -1,7 +1,8 @@
 import { Box, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { fromBech32Address } from "@zilliqa-js/crypto";
-import { CurrencyInput, FancyButton, ProportionSelect } from "app/components";
+import { CurrencyInput, FancyButton } from "app/components";
+// import { CurrencyInput, FancyButton, ProportionSelect } from "app/components";
 import { actions } from "app/store";
 import { PoolFormState, RootState, SwapFormState, TokenInfo, TokenState, WalletObservedTx, WalletState } from "app/store/types";
 import { strings, useAsyncTask, useNetwork, useToaster } from "app/utils";
@@ -33,7 +34,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     marginBottom: 4,
   },
   actionButton: {
-    marginTop: theme.spacing(4),
+    marginTop: theme.spacing(3),
     marginBottom: theme.spacing(4),
     height: 46
   },
@@ -50,14 +51,15 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     color: theme.palette.primary.main
   },
   poolIcon: {
-    margin: 12,
-    marginTop: -30,
+    margin: 24,
+    marginTop: 0,
     marginBottom: 0,
     [theme.breakpoints.down("sm")]: {
       marginTop: -33
     },
   },
   poolIconBox: {
+    padding: theme.spacing(1),
     justifyContent: "center",
     [theme.breakpoints.down("sm")]: {
       justifyContent: "flex-start"
@@ -111,7 +113,7 @@ const PoolDeposit: React.FC<React.HTMLAttributes<HTMLDivElement>> = (props: any)
   }, [network]);
 
 
-  const onPercentage = (percentage: number) => {
+/*  const onPercentage = (percentage: number) => {
     if (!poolToken) return;
 
     const balance = new BigNumber(poolToken.balance?.toString() || 0);
@@ -119,6 +121,7 @@ const PoolDeposit: React.FC<React.HTMLAttributes<HTMLDivElement>> = (props: any)
     const netGasAmount = poolToken.isZil ? ZilswapConnector.adjustedForGas(intendedAmount, balance) : intendedAmount;
     onTokenChange(netGasAmount.shiftedBy(-poolToken.decimals).toString());
   };
+*/
 
   const onPoolChange = (token: TokenInfo) => {
     if (token.symbol === "ZIL") return;
@@ -396,13 +399,13 @@ const PoolDeposit: React.FC<React.HTMLAttributes<HTMLDivElement>> = (props: any)
           onCurrencyChange={onPoolChange}
           dialogOpts={{ hideZil: true }} />
 
-        <Box display="flex" justifyContent="flex-end">
+	  {/*        <Box display="flex" justifyContent="flex-end">
           <ProportionSelect
             color="primary"
             size="small"
             className={classes.proportionSelect}
             onSelectProp={onPercentage} />
-        </Box>
+        </Box> */}
 
         <Box display="flex" className={classes.poolIconBox}>
           <PoolIcon type="plus" className={classes.poolIcon} />

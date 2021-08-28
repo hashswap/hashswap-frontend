@@ -61,7 +61,7 @@ const typography = (palette) => ({
     fontSize: "16px",
     fontWeight: "normal",
     lineHeight: "20px",
-    letterSpacing: "0",
+    letterSpacing: ".25px",
     textTransform: "none",
   },
   caption: {

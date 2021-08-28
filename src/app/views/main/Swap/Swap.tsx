@@ -7,7 +7,8 @@ import { ReactComponent as SettingsGearIcon } from "app/components/SvgIcons/sett
 import RemoveIcon from "@material-ui/icons/RemoveRounded";
 import { fromBech32Address } from "@zilliqa-js/crypto";
 import { validation as ZilValidation } from "@zilliqa-js/util";
-import { CurrencyInput, FancyButton, Notifications, ProportionSelect, ShowAdvanced, Text } from "app/components";
+import { CurrencyInput, FancyButton, Notifications, ShowAdvanced, Text } from "app/components";
+// import { CurrencyInput, FancyButton, Notifications, ProportionSelect, ShowAdvanced, Text } from "app/components";
 import MainCard from "app/layouts/MainCard";
 import { actions } from "app/store";
 import { ExactOfOptions, LayoutState, RootState, SwapFormState, TokenInfo, TokenState, WalletObservedTx, WalletState } from "app/store/types";
@@ -46,7 +47,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   },
   swapButton: {
     padding: 0,
-    marginTop: -49,
+    marginTop: -15,
     marginBottom: -15,
     transform: "rotate(0)",
     transition: "transform .5s ease-in-out",
@@ -105,7 +106,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     marginBottom: theme.spacing(2),
   },
   actionButton: {
-    marginTop: theme.spacing(4),
+    marginTop: theme.spacing(3),
     marginBottom: theme.spacing(4),
     height: 46
   },
@@ -173,13 +174,15 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     }
   },
   iconButton: {
-    color: theme.palette.type === "dark" ? "rgba(222, 255, 255, 0.5)" : "#b14887",
-    backgroundColor: theme.palette.type === "dark" ? "rgba(222, 255, 255, 0.1)" : "#ffffff",
+    color: theme.palette.type === "dark" ? "rgba(222, 255, 255, 0.5)" : "#000000",
+    backgroundColor: "none",
+    // backgroundColor: theme.palette.type === "dark" ? "rgba(222, 255, 255, 0.1)" : "#ffffff",
     borderRadius: 12,
     padding: 5,
     marginLeft: 5,
   },
   swapIconBox: {
+    padding: theme.spacing(0),
     zIndex: 1,
     justifyContent: "center",
     [theme.breakpoints.down("sm")]: {
@@ -296,7 +299,7 @@ const Swap: React.FC<React.HTMLAttributes<HTMLDivElement>> = (props: any) => {
     }
   };
 
-  const onPercentage = (percentage: number) => {
+/*  const onPercentage = (percentage: number) => {
     const { inToken } = swapFormState;
     if (!inToken) return;
 
@@ -305,7 +308,7 @@ const Swap: React.FC<React.HTMLAttributes<HTMLDivElement>> = (props: any) => {
     const netGasAmount = inToken.isZil ? ZilswapConnector.adjustedForGas(intendedAmount, balance) : intendedAmount;
     onInAmountChange(netGasAmount.shiftedBy(-inToken.decimals).toString());
   };
-
+*/
   const calculateAmounts = (props: CalculateAmountProps = {}) => {
     let _inAmount: BigNumber = props.inAmount || swapFormState.inAmount;
     let _outAmount: BigNumber = props.outAmount || swapFormState.outAmount;
@@ -608,9 +611,9 @@ const Swap: React.FC<React.HTMLAttributes<HTMLDivElement>> = (props: any) => {
             onEditorBlur={onDoneEditing}
             onAmountChange={onInAmountChange}
             onCurrencyChange={onInCurrencyChange} />
-          <Box display="flex" justifyContent="flex-end">
+{/*         <Box display="flex" justifyContent="flex-end">
             <ProportionSelect size="small" className={classes.proportionSelect} onSelectProp={onPercentage} />
-          </Box>
+          </Box> */}
           <Box display="flex" className={classes.swapIconBox}>
             <IconButton
               disabled={!inToken || !outToken}

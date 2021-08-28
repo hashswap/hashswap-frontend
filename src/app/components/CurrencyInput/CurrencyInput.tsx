@@ -25,6 +25,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     paddingLeft: 0,
     backgroundColor: theme.palette.currencyInput,
     border: 0,
+    boxShadow: "0 1px 2px 0 rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%)",
   },
   input: {
     textAlign: "left",

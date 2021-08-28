@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     [theme.breakpoints.down("xs")]: {
       padding: theme.spacing(2, 2, 0),
     },
-    marginBottom: 12
+    marginBottom: 0
   },
   colContainer: {
     padding: theme.spacing(0, 4, 2),

@@ -24,12 +24,14 @@ const useStyles = makeStyles(theme => ({
     '&:not(:first-child)': {
       borderTopLeftRadius: 0,
       borderBottomLeftRadius: 0,
-      border: theme.palette.type === "dark" ? "1px solid #29475A" : "1px solid #D2E5DF",
+      border: 0
+      // border: theme.palette.type === "dark" ? "1px solid #29475A" : "1px solid #D2E5DF",
     },
     '&:not(:last-child)': {
       borderTopRightRadius: 0,
       borderBottomRightRadius: 0,
-      border: theme.palette.type === "dark" ? "1px solid #29475A" : "1px solid #D2E5DF",
+      border: 0
+      // border: theme.palette.type === "dark" ? "1px solid #29475A" : "1px solid #D2E5DF",
     },
   },
 }));

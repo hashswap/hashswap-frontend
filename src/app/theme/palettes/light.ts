@@ -50,21 +50,23 @@ const theme = {
   action: {
     active: "#b14887",
     disabled: "rgba(222, 255, 255, 0.5)",
-    disabledBackground: "rgba(0, 51, 64, 0.5)",
+    disabledBackground: "#c597b3",
+    // disabledBackground: "rgba(0, 51, 64, 0.5)",
     selected: "#b14887"
   },
   tab: {
-    active: "#b14887",
-    disabled: "rgba(222, 255, 255, 0.5)",
-    disabledBackground: "#7B999E",
+    active: "#8e115c",
+    disabled: "rgba(255, 255, 255, 0.85)",
+    disabledBackground: "#c598b3",
     selected: "#FFFFFF"
   },
-  mainBoxShadow: "0 8px 16px 0 rgba(20,155,163,0.16)",
+  mainBoxShadow: "0 1px 3px 0 rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 2px 1px -1px rgb(0 0 0 / 12%)",
+  // mainBoxShadow: "0 8px 16px 0 rgba(20,155,163,0.16)",
   cardBoxShadow: "0 4px 8px 2px rgba(20, 155, 163, 0.16)",
   navbar: "#DEFFF5",
   switcheoLogo: switcheo.logoLight,
   colors: { zilliqa, switcheo },
-  currencyInput: "#dbe3ef",
+  currencyInput: "#ffffff",
   icon: "#b14887",
   label: "#000000",
   warning: {
