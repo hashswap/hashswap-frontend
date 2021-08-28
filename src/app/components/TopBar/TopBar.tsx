@@ -97,7 +97,7 @@ const useStyles = makeStyles(theme => ({
     boxShadow: "inset 0 -1px #757784",
     [theme.breakpoints.up("sm")]: {
       "&>div": {
-        flex: 1,
+        // flex: 1,
         flexBasis: 1,
         display: "flex",
         flexDirection: "row",
@@ -106,6 +106,15 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down("xs")]: {
       paddingRight: 0,
     },
+  },
+  brandLogo: {
+	flex: 0,
+  },
+  navBar: {
+	flex: 2,
+  },
+  walletBar: {
+	flex: 1,
   },
   themeSwitch: {
     [theme.breakpoints.down("xs")]: {
@@ -149,11 +158,11 @@ const TopBar: React.FC<TopBarProps & React.HTMLAttributes<HTMLDivElement>> = (pr
 	*/}
 
         
-    <Box justifyContent="flex-start" flexGrow="0">
+    <Box justifyContent="flex-start" className={classes.brandLogo} flexGrow="0">
      <Brand /> Beta    
     </Box>
        
-    <Box justifyContent="center">
+    <Box className={classes.navBar} justifyContent="center">
      <NavMenu>
       <NavLink to="/swap" >
         Swap
