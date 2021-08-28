@@ -78,7 +78,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   maxButton: {
     display: "flex",
     padding: "34px 0px 12px 5px",
-    color: theme.palette.type === "dark" ? "#b14887" : "#DEFFFF",
+    color: theme.palette.type === "dark" ? "#b14887" : "#FFFFFF",
     "& .MuiButton-label": {
       width: "inherit",
       padding: "2px 4px",
@@ -95,7 +95,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
       backgroundColor: "transparent",
     },
     "&.Mui-disabled": {
-      color: theme.palette.type === "dark" ? "#b14887" : "#DEFFFF",
+      color: theme.palette.type === "dark" ? "#b14887" : "#FFFFFF",
       "& .MuiButton-label": {
         backgroundColor: `rgba${hexToRGBA(theme.palette.type === "dark" ? "#00FFB0" : "#b14887", 0.4)}`,
       }

@@ -15,6 +15,136 @@ import TextaMediumWebFont from "../fonts/new/Texta-Medium-webfont.woff";
 import TextaLightWebFont from "../fonts/new/Texta-Light-webfont.woff";
 import TextaHeavyWebFont from "../fonts/new/Texta-Heavy-webfont.woff";
 
+import UaGrENHsxJlGDuGo1OIlL3Kwp5eKQtGBlc from "../fonts/new/HSANS/4UaGrENHsxJlGDuGo1OIlL3Kwp5eKQtGBlc.woff2"
+import UaGrENHsxJlGDuGo1OIlL3Nwp5eKQtGBlc from "../fonts/new/HSANS/4UaGrENHsxJlGDuGo1OIlL3Nwp5eKQtGBlc.woff2"
+import UaGrENHsxJlGDuGo1OIlL3Bwp5eKQtGBlc from "../fonts/new/HSANS/4UaGrENHsxJlGDuGo1OIlL3Bwp5eKQtGBlc.woff2"
+import UaGrENHsxJlGDuGo1OIlL3Awp5eKQtGBlc from "../fonts/new/HSANS/4UaGrENHsxJlGDuGo1OIlL3Awp5eKQtGBlc.woff2"
+import UaGrENHsxJlGDuGo1OIlL3Owp5eKQtG from "../fonts/new/HSANS/4UaGrENHsxJlGDuGo1OIlL3Owp5eKQtG.woff2"
+import UabrENHsxJlGDuGo1OIlLU94Yt3CwZsPF4oxIs from "../fonts/new/HSANS/4UabrENHsxJlGDuGo1OIlLU94Yt3CwZsPF4oxIs.woff2"
+import UabrENHsxJlGDuGo1OIlLU94YtwCwZsPF4oxIs from "../fonts/new/HSANS/4UabrENHsxJlGDuGo1OIlLU94YtwCwZsPF4oxIs.woff2"
+import UabrENHsxJlGDuGo1OIlLU94Yt8CwZsPF4oxIs from "../fonts/new/HSANS/4UabrENHsxJlGDuGo1OIlLU94Yt8CwZsPF4oxIs.woff2"
+import UabrENHsxJlGDuGo1OIlLU94Yt9CwZsPF4oxIs from "../fonts/new/HSANS/4UabrENHsxJlGDuGo1OIlLU94Yt9CwZsPF4oxIs.woff2"
+import UabrENHsxJlGDuGo1OIlLU94YtzCwZsPF4o from "../fonts/new/HSANS/4UabrENHsxJlGDuGo1OIlLU94YtzCwZsPF4o.woff2"
+
+
+import HashSansFont from "../fonts/new/hsans.woff2";
+
+const HSans = {
+  fontFamily: '"HSans"',
+  fontStyle: 'normal',
+  fontDisplay: 'swap',
+}
+
+const HSansMediumA = {
+  ...HSans,
+  fontStyle: 'normal',
+  fontWeight: 400,
+  src: `
+    url(${UaGrENHsxJlGDuGo1OIlL3Kwp5eKQtGBlc}) format('woff2')
+  `,
+  unicodeRange: `U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116`, 
+
+}
+
+const HSansMediumB = {
+  ...HSans,
+  fontStyle: 'normal',
+  fontWeight: 400,
+  src: `
+    url(${UaGrENHsxJlGDuGo1OIlL3Nwp5eKQtGBlc}) format('woff2')
+  `,
+  unicodeRange: `U+0370-03FF`, 
+
+}
+
+const HSansMediumC = {
+  ...HSans,
+  fontStyle: 'normal',
+  fontWeight: 400,
+  src: `
+    url(${UaGrENHsxJlGDuGo1OIlL3Bwp5eKQtGBlc}) format('woff2')
+  `,
+  unicodeRange: `U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB`, 
+
+}
+
+const HSansMediumD = {
+  ...HSans,
+  fontStyle: 'normal',
+  fontWeight: 400,
+  src: `
+    url(${UaGrENHsxJlGDuGo1OIlL3Awp5eKQtGBlc}) format('woff2')
+  `,
+  unicodeRange: `U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF`, 
+
+}
+
+const HSansMediumE = {
+  ...HSans,
+  fontStyle: 'normal',
+  fontWeight: 400,
+  src: `
+    url(${UaGrENHsxJlGDuGo1OIlL3Owp5eKQtG}) format('woff2')
+  `,
+  unicodeRange: `U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD`, 
+
+}
+
+const HSansMediumF = {
+  ...HSans,
+  fontStyle: 'normal',
+  fontWeight: 400,
+  src: `
+    url(${UabrENHsxJlGDuGo1OIlLU94Yt3CwZsPF4oxIs}) format('woff2')
+  `,
+  unicodeRange: `U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116`, 
+
+}
+
+const HSansMediumG = {
+  ...HSans,
+  fontStyle: 'normal',
+  fontWeight: 400,
+  src: `
+    url(${UabrENHsxJlGDuGo1OIlLU94YtwCwZsPF4oxIs}) format('woff2')
+  `,
+  unicodeRange: `U+0370-03FF`, 
+
+}
+
+const HSansMediumH = {
+  ...HSans,
+  fontStyle: 'normal',
+  fontWeight: 400,
+  src: `
+    url(${UabrENHsxJlGDuGo1OIlLU94Yt8CwZsPF4oxIs}) format('woff2')
+  `,
+  unicodeRange: `U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB`, 
+
+}
+
+const HSansMediumI = {
+  ...HSans,
+  fontStyle: 'normal',
+  fontWeight: 400,
+  src: `
+    url(${UabrENHsxJlGDuGo1OIlLU94Yt9CwZsPF4oxIs}) format('woff2')
+  `,
+  unicodeRange: `U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF`, 
+
+}
+
+const HSansMediumJ = {
+  ...HSans,
+  fontStyle: 'normal',
+  fontWeight: 400,
+  src: `
+    url(${UabrENHsxJlGDuGo1OIlLU94YtzCwZsPF4o}) format('woff2')
+  `,
+  unicodeRange: `U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD`,
+
+}
+
 const Texta = {
   fontFamily: '"Texta"',
   fontStyle: 'normal',
@@ -165,6 +295,16 @@ const MuiCssBaseline = () => ({
       TextaMedium,
       TextaLight,
       TextaHeavy,
+      HSansMediumA,
+      HSansMediumB,
+      HSansMediumC,
+      HSansMediumD,
+      HSansMediumE,
+      HSansMediumF,
+      HSansMediumG,
+      HSansMediumH,
+      HSansMediumI,
+      HSansMediumJ,
     ],
   }
 });

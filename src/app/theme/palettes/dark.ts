@@ -3,7 +3,7 @@ import { colors } from '@material-ui/core';
 import { zilliqa, switcheo } from "./colors";
 
 const TEXT_COLORS = {
-  primary: "#DEFFFF",
+  primary: "#FFFFFF",
   secondary: "rgba(222, 255, 255, 0.5)",
 };
 
@@ -13,7 +13,7 @@ const theme = {
     main: "#0D1B24",
   },
   primary: {
-    contrastText: "#DEFFFF",
+    contrastText: "#FFFFFF",
     dark: "#00FFB0",
     main: "#000000",
     light: "rgba(222, 255, 255, 0.5)",
@@ -58,7 +58,7 @@ const theme = {
     active: "#13222C",
     disabled: "rgba(222, 255, 255, 0.5)",
     disabledBackground: "#0D1B24",
-    selected: "#DEFFFF"
+    selected: "#FFFFFF"
   },
   mainBoxShadow: "none",
   cardBoxShadow: "0 4px 8px 1px rgba(0, 0, 0, 0.2)",

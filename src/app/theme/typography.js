@@ -9,7 +9,7 @@ const typography = (palette) => ({
     letterSpacing: "-0.2px",
   },
   h2: {
-    fontFamily: "Texta",
+    fontFamily: "HSans",
     fontWeight: "normal",
     fontSize: 26,
   },
@@ -20,7 +20,7 @@ const typography = (palette) => ({
     letterSpacing: "-0.2px",
   },
   h4: {
-    fontFamily: "Texta",
+    fontFamily: "HSans",
     fontSize: "20px",
     lightHeight: "22px",
     fontWeight: "normal",
@@ -44,7 +44,7 @@ const typography = (palette) => ({
     letterSpacing: 0,
   },
   body1: {
-    fontFamily: "Texta",
+	  fontFamily: "Texta",
     fontSize: "15px",
     lineHeight: "14px",
     fontWeight: "normal",
@@ -57,11 +57,11 @@ const typography = (palette) => ({
     fontWeight: 500
   },
   button: {
-    fontFamily: "Texta",
-    fontSize: "20px",
-    fontWeight: "bold",
+    fontFamily: "HSans",
+    fontSize: "16px",
+    fontWeight: "normal",
     lineHeight: "20px",
-    letterSpacing: "1px",
+    letterSpacing: "0",
     textTransform: "none",
   },
   caption: {

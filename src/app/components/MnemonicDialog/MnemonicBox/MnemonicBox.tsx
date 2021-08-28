@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
         "& .MuiButton-text": {
             padding: "6px 16px"
         },
-        border: `2px solid ${theme.palette.type === "dark" ? `rgba${hexToRGBA("#DEFFFF", 0.1)}` : "#D2E5DF"}`
+        border: `2px solid ${theme.palette.type === "dark" ? `rgba${hexToRGBA("#FFFFFF", 0.1)}` : "#D2E5DF"}`
     },
     visibilityIcon: {
         color: theme.palette.label
@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     },
     word: {
         padding: theme.spacing(1.25, 0.5),
-        backgroundColor: theme.palette.type === "dark" ? `rgba${hexToRGBA("#DEFFFF", 0.1)}` : "#D2E5DF",
+        backgroundColor: theme.palette.type === "dark" ? `rgba${hexToRGBA("#FFFFFF", 0.1)}` : "#D2E5DF",
         borderRadius: 12
     },
     copyIcon: {

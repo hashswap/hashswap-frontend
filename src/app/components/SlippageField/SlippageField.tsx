@@ -58,7 +58,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   selectedSlippage: {
     borderRadius: "12px",
     backgroundColor: theme.palette.primary.dark,
-    color: theme.palette.type === "dark" ? "#b14887" : "#DEFFFF",
+    color: theme.palette.type === "dark" ? "#b14887" : "#FFFFFF",
     border: `1px solid ${theme.palette.type === "dark" ? "#29475A" : "transparent"}`,
     "&:hover": {
       backgroundColor: theme.palette.primary.dark,

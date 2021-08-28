@@ -57,7 +57,7 @@ const theme = {
     active: "#b14887",
     disabled: "rgba(222, 255, 255, 0.5)",
     disabledBackground: "#7B999E",
-    selected: "#DEFFFF"
+    selected: "#FFFFFF"
   },
   mainBoxShadow: "0 8px 16px 0 rgba(20,155,163,0.16)",
   cardBoxShadow: "0 4px 8px 2px rgba(20, 155, 163, 0.16)",

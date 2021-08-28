@@ -58,7 +58,7 @@ const useStyles = makeStyles(theme => ({
   },
   label: {
     paddingLeft: "16px",
-    color: "#DEFFFF"
+    color: "#FFFFFF"
   },
   balance: {
     cursor: 'pointer',

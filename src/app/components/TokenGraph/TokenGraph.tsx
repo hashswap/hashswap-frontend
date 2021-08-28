@@ -170,7 +170,7 @@ const TokenGraph: React.FC<Props> = (props: Props) => {
         height: graphRef.current.clientHeight,
         layout: {
           backgroundColor: 'rgba(0,0,0, 0.0)',
-          textColor: themeType === "dark" ? "#DEFFFF" : "#8099A0",
+          textColor: themeType === "dark" ? "#FFFFFF" : "#8099A0",
         },
         grid: {
           vertLines: {
@@ -236,7 +236,7 @@ const TokenGraph: React.FC<Props> = (props: Props) => {
       return;
     }
     const chartOptions = chart.options()
-    chartOptions.layout.textColor = themeType === "dark" ? "#DEFFFF" : "#8099A0";
+    chartOptions.layout.textColor = themeType === "dark" ? "#FFFFFF" : "#8099A0";
     chartOptions.grid.vertLines.color = themeType === 'dark' ? 'rgba(220, 220, 220, 0.1)' : 'rgba(220, 220, 220, 0.8)';
     chartOptions.grid.horzLines.color = themeType === 'dark' ? 'rgba(220, 220, 220, 0.1)' : 'rgba(220, 220, 220, 0.8)';
     chart.applyOptions(chartOptions);

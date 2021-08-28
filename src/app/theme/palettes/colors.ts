@@ -40,5 +40,5 @@ export const switcheo = {
   accent: "#E2FCA4",
   primary: "#063C4F",
   logoDark: "#FFFFFF",
-  logoLight: "#DEFFFF",
+  logoLight: "#FFFFFF",
 };
