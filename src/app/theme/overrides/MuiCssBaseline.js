@@ -27,8 +27,6 @@ import UabrENHsxJlGDuGo1OIlLU94Yt9CwZsPF4oxIs from "../fonts/new/HSANS/4UabrENHs
 import UabrENHsxJlGDuGo1OIlLU94YtzCwZsPF4o from "../fonts/new/HSANS/4UabrENHsxJlGDuGo1OIlLU94YtzCwZsPF4o.woff2"
 
 
-import HashSansFont from "../fonts/new/hsans.woff2";
-
 const HSans = {
   fontFamily: '"HSans"',
   fontStyle: 'normal',

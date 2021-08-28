@@ -19,6 +19,11 @@ export interface FancyButtonProps extends ButtonProps {
 };
 
 const useStyles = makeStyles(theme => ({
+
+	root: {
+	fontSize: "18px",
+},
+
   progress: {
     color: "rgba(255,255,255,.8)",
     position: "absolute",
@@ -112,7 +117,7 @@ const FancyButton: React.FC<FancyButtonProps> = (props: any) => {
   const buttonLoading = (walletRequired && !walletState.wallet) ? loadingConnectWallet : loading;
 
   return (
-    <Box display="flex">
+    <Box display="flex" className={classes.root}>
       {(showTxApprove && walletState.wallet) && (
         <Tooltip title="Transaction needs to be approved before swapping or adding liquidity">
           <Button onClick={onClickTxApprove} disabled={approveButtonDisabled} className={cls(classes.unlockButton, className)} color="primary" variant="contained">
