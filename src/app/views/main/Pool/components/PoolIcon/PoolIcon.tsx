@@ -20,10 +20,18 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     padding: 0,
     background: "none", 
     // background: theme.palette.type === "dark" ? "#303637": "#F7FAFA",
+    [theme.breakpoints.down("sm")]: {
+       height: 18,
+       width: 18,
+    },
   },
   icon: {
     height: 20,
     width: 20,
+    [theme.breakpoints.down("sm")]: {
+       height: 18,
+       width: 18,
+    },
     "& path": {
       stroke: "#000000",	    
       fill: theme.palette.icon

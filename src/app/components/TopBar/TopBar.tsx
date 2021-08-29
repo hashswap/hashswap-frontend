@@ -6,7 +6,7 @@ import { Brand } from "app/components/TopBar/components";
 import cls from "classnames";
 import React from "react";
 // import React, { forwardRef, Fragment, useEffect, useRef, useState } from "react";
-import ConnectWalletButton from "../ConnectWalletButton";
+// import ConnectWalletButton from "../ConnectWalletButton";
 import ThemeSwitch from "../ThemeSwitch";
 // import { ReactComponent as MenuIcon } from "./menu.svg";
 import { TopBarProps } from "./types";
@@ -177,7 +177,7 @@ const TopBar: React.FC<TopBarProps & React.HTMLAttributes<HTMLDivElement>> = (pr
     </Box>
     <Box display="flex" flex={1} justifyContent="flex-end" alignItems="center">
     {/*   <RewardsInfoButton />    */}
-          <ConnectWalletButton />
+    {/*      <ConnectWalletButton /> */}   
           <ThemeSwitch className={classes.themeSwitch} />
         </Box>
       </Toolbar>

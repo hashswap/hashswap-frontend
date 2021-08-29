@@ -36,7 +36,11 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   actionButton: {
     marginTop: theme.spacing(3),
     marginBottom: theme.spacing(4),
-    height: 46
+    height: 46,
+    [theme.breakpoints.down("sm")]: {
+      marginTop: theme.spacing(2),
+      marginBottom: theme.spacing(3),
+    },
   },
   keyValueLabel: {
     marginTop: theme.spacing(1),
@@ -55,14 +59,14 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     marginTop: 0,
     marginBottom: 0,
     [theme.breakpoints.down("sm")]: {
-      marginTop: -33
+      // marginTop: -33
     },
   },
   poolIconBox: {
     padding: theme.spacing(1),
     justifyContent: "center",
     [theme.breakpoints.down("sm")]: {
-      justifyContent: "flex-start"
+      // justifyContent: "flex-start"
     },
   }
 }));

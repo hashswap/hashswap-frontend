@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     transform: "rotate(0)",
     transition: "transform .5s ease-in-out",
     [theme.breakpoints.down("sm")]: {
-      marginTop: -55
+      marginTop: -15
     },
     zIndex: 1
   },
@@ -169,6 +169,11 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     marginTop: theme.spacing(1),
   },
   swapIcon: {
+    height: "40px",	  
+    [theme.breakpoints.down("sm")]: {
+      height: "30px",	  
+      // justifyContent: "flex-start"
+    },
     "& path": {
       fill: theme.palette.icon
     }
@@ -185,8 +190,10 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     padding: theme.spacing(0),
     zIndex: 1,
     justifyContent: "center",
-    [theme.breakpoints.down("sm")]: {
-      justifyContent: "flex-start"
+    height: "15px",
+   [theme.breakpoints.down("sm")]: {
+      height: "10px",
+      // justifyContent: "flex-start"
     },
   }
 }));
