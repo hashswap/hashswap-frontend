@@ -1,6 +1,6 @@
-const typography = (palette) => ({
-  fontFamily: [
-    "Futura"
+	const typography = (palette) => ({
+	  fontFamily: [
+    "Texta"
   ].join(","),
   h1: {
     fontSize: "26px",
@@ -28,7 +28,7 @@ const typography = (palette) => ({
   h5: {
   },
   h6: {
-    fontFamily: "Futura",
+    fontFamily: "Texta",
     fontWeight: 600,
     fontSize: "14px"
   },
