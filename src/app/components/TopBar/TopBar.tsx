@@ -89,6 +89,7 @@ export const NavBtnLink = styled(Link)`
 const useStyles = makeStyles(theme => ({
   root: {
     minWidth: "100%",
+    position: "fixed",
   },
   toolBar: {
     paddingLeft: "5%",

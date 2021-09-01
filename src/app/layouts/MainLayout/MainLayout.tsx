@@ -18,10 +18,11 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     background: theme.palette.background.gradient,
   },
   content: {
-    position: "relative",
+    position: "fixed",
     flex: 1,
     display: "flex",
     flexDirection: "row",
+    paddingTop: "15vh",
     // paddingBottom: theme.spacing(8),
     [theme.breakpoints.down("sm")]: {
       display: "block",
@@ -37,18 +38,6 @@ const MainLayout: React.FC<React.HTMLAttributes<HTMLDivElement>> = (props: any) 
   const onToggleDrawer = (override?: boolean) => {
     setShowDrawer(typeof override === "boolean" ? override : !showDrawer);
   };
-
-  console.log("+++++++ MAIN LAYOUT -++++++++");
-  console.log("+++++++ MAIN LAYOUT -++++++++");
-  console.log("+++++++ MAIN LAYOUT -++++++++");
-  console.log("+++++++ MAIN LAYOUT -++++++++");
-  console.log("+++++++ MAIN LAYOUT -++++++++");
-  console.log(route.routes);
-  console.log("+++++++ MAIN LAYOUT -++++++++");
-  console.log("+++++++ MAIN LAYOUT -++++++++");
-  console.log("+++++++ MAIN LAYOUT -++++++++");
-  console.log("+++++++ MAIN LAYOUT -++++++++");
-  console.log("+++++++ MAIN LAYOUT -++++++++");
 
   return (
     <Box className={classes.root}>

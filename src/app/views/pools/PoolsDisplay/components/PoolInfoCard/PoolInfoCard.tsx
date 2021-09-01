@@ -37,6 +37,12 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     padding: theme.spacing(0, 4),
     paddingTop: theme.spacing(2)
   },
+  influencerName: {
+    padding: theme.spacing(1,0,0),
+    letterSpacing: "1px",
+    fontSize: 20,
+    color: "#586e90",
+  },
   poolIcon: {
     marginRight: theme.spacing(2),
   },
@@ -277,6 +283,8 @@ const PoolInfoCard: React.FC<Props> = (props: Props) => {
           </Button>
         </Box>
         <InfluencerInfo className={classes.logo} currency={token.symbol} address={token.address} />
+        <Text className={classes.influencerName}>{token.name}</Text>
+
       </CardContent>
 
       <CardContent className={classes.content}>
