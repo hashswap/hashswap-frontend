@@ -5,6 +5,8 @@ import { PaperProps } from "material-ui";
 import React, { Fragment, useRef } from "react";
 import NavBar from "./components/NavBar";
 import PoolsOverview from "app/views/pools/PoolsOverview";
+import clsx from "clsx";
+	    
 
 const CARD_BORDER_RADIUS = 12;
 
@@ -21,6 +23,10 @@ const useStyles = makeStyles((theme: AppTheme) => ({
       padding: theme.spacing(6, 2, 2),
     },
   },
+  info: {
+    height: "100vh",
+    overflow: "scroll",
+  },  
   graph: {
     [theme.breakpoints.down("sm")]: {
       height: 400,
@@ -117,7 +123,7 @@ const MainCard: React.FC<PaperProps> = (props: any) => {
           </Box>
         </Box>
       </Box>
-      <Box className={classes.root}>
+      <Box className={clsx(classes.root,classes.info)}>
    	 <PoolsOverview />
       </Box>
     </Fragment>
