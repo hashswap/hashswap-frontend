@@ -16,12 +16,12 @@ interface Props extends BoxProps {
 
 const useStyles = makeStyles((theme: AppTheme) => ({
   root: {
-    background: theme.palette.type === "dark" ? "linear-gradient(#13222C, #002A34)" : "#b5c7e2",
+    background: theme.palette.type === "dark" ? "linear-gradient(#13222C, #002A34)" : "#5a6f90",
     // border: theme.palette.type === "dark" ? "1px solid #29475A" : "1px solid #D2E5DF",
     marginTop: 0,
     padding: theme.spacing(4, 6),
     borderRadius: 12,
-    boxShadow: theme.palette.mainBoxShadow,
+    // boxShadow: theme.palette.mainBoxShadow,
     "& .MuiOutlinedInput-input": {
       padding: theme.spacing(2, 2),
       fontSize: "20px"
