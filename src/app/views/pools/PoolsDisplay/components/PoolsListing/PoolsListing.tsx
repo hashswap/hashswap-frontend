@@ -39,6 +39,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     width: "100%",
     lineHeight: "initial",
     fontSize: "2em",
+    color: "#ffffff",
     [theme.breakpoints.down("sm")]: {
       flexDirection: "column"
     },
@@ -134,7 +135,7 @@ const PoolsListing: React.FC<Props> = (props: Props) => {
   return (
     <Box {...rest} className={cls(classes.root, className)} mt={6} mb={2}>
       <Box display="flex" justifyContent="space-between" mb={2} className={classes.header}>
-    Influencers ({otherTokens.length})
+    INFLUENCERS ({otherTokens.length})
     {/* <Text variant="h2" margin={2}>Influencers ({registeredTokens.length})</Text> */}
         <PoolsSearchInput className={classes.search} onSearch={onSearch}/>
       </Box>
