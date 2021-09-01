@@ -4,7 +4,7 @@ import { AppTheme } from "app/theme/types";
 import { PaperProps } from "material-ui";
 import React, { Fragment, useRef } from "react";
 import NavBar from "./components/NavBar";
-import PoolsOverview from "app/views/pools/PoolsOverview";
+import PoolsDisplay from "app/views/pools/PoolsDisplay";
 import clsx from "clsx";
 	    
 
@@ -124,7 +124,7 @@ const MainCard: React.FC<PaperProps> = (props: any) => {
         </Box>
       </Box>
       <Box className={clsx(classes.root,classes.info)}>
-   	 <PoolsOverview />
+   	 <PoolsDisplay />
       </Box>
     </Fragment>
   );

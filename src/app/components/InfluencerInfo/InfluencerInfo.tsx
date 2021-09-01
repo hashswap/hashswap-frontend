@@ -11,13 +11,13 @@ import { Network } from "zilswap-sdk/lib/constants";
 
 const useStyles = makeStyles((theme: AppTheme) => ({
   root: {
-    width: 30,
-    height: 30,
+    width: 80,
+    height: 80,
     display: "flex",
-    borderRadius: 14,
+    borderRadius: 3,
     padding: 2,
-    border: "1px solid black",
-    boxShadow: "1px 1px 2px 0 rgb(0 0 0 / 20%), 1px 2px 1px 1px rgb(0 0 0 / 14%), 2px 3px 0px -1px rgb(0 0 0 / 12%)",
+    border: "1px solid #e3e7ec",
+    // boxShadow: "1px 1px 2px 0 rgb(0 0 0 / 20%), 1px 2px 1px 1px rgb(0 0 0 / 14%), 2px 3px 0px -1px rgb(0 0 0 / 12%)",
   },
   svg: {
     maxWidth: "100%",
@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   },
 }));
 
-const CurrencyLogo = (props: any) => {
+const InfluencerInfo = (props: any) => {
   const { currency, address, className, blockchain }: {
     currency: string | false;
     address: string;
@@ -60,7 +60,7 @@ const CurrencyLogo = (props: any) => {
 
   if (network === Network.TestNet) {
     // tokenIconUrl = `https://dr297zt0qngbx.cloudfront.net/tokens/testnet/${logoAddress}`
-    tokenIconUrl = `http://celeb-images.nyc3.cdn.digitaloceanspaces.com/hashswap/${logoAddress}`
+    tokenIconUrl = `http://celeb-images.nyc3.cdn.digitaloceanspaces.com/hashswap/influencer/${logoAddress}.jpg`
   } else {
     tokenIconUrl = `https://meta.viewblock.io/ZIL${tokenKey}/logo${urlSuffix}`
   }
@@ -80,4 +80,4 @@ const CurrencyLogo = (props: any) => {
   )
 };
 
-export default CurrencyLogo;
+export default InfluencerInfo;

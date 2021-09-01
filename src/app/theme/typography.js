@@ -17,7 +17,7 @@
     fontSize: "18px",
     lineHeight: "20px",
     fontWeight: "bold",
-    letterSpacing: "-0.2px",
+    letterSpacing: "0.2px",
   },
   h4: {
     fontFamily: "HSans",
@@ -53,7 +53,7 @@
   body2: {
     fontSize: "12px",
     lineHeight: "16px",
-    letterSpacing: "-0.2px",
+    letterSpacing: "0.2px",
     fontWeight: 500
   },
   button: {
