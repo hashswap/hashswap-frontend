@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     background: theme.palette.type === "dark" ? "linear-gradient(#13222C, #002A34)" : "#5a6f90",
     // border: theme.palette.type === "dark" ? "1px solid #29475A" : "1px solid #D2E5DF",
     marginTop: 0,
-    padding: theme.spacing(4, 6),
+    padding: theme.spacing(4, 6, 8),
     borderRadius: 12,
     // boxShadow: theme.palette.mainBoxShadow,
     "& .MuiOutlinedInput-input": {

@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     flex: 1,
     display: "flex",
     flexDirection: "row",
-    paddingTop: "15vh",
+    paddingTop: "12vh",
     // paddingBottom: theme.spacing(8),
     [theme.breakpoints.down("sm")]: {
       display: "block",

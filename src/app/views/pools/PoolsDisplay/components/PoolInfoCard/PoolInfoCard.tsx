@@ -42,6 +42,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     letterSpacing: "1px",
     fontSize: 20,
     color: "#586e90",
+    fontFamily: "HSans",
   },
   poolIcon: {
     marginRight: theme.spacing(2),

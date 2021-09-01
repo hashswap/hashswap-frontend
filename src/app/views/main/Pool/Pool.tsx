@@ -8,7 +8,7 @@ import cls from "classnames";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { CreatePoolDialog, NewPoolMessage, PoolDeposit, PoolManage, PoolToggleButton, PoolWithdraw, SponsorDeposit, SponsorWithdraw } from "./components";
-import AddLiquidityEarnMessage from "./components/AddLiquidityEarnMessage";
+// import AddLiquidityEarnMessage from "./components/AddLiquidityEarnMessage";
 // import { ReactComponent as PlusSVG } from "./plus_icon.svg";
 import { ReactComponent as SettingsGearIcon } from "app/components/SvgIcons/setting-icon.svg";
 // import BrightnessLowIcon from '@material-ui/icons/BrightnessLowRounded';
@@ -91,7 +91,7 @@ const PoolView: React.FC<React.HTMLAttributes<HTMLDivElement>> = (props: any) =>
       {!poolToken?.pool && (
         <NewPoolMessage token={poolToken || undefined} />
       )}
-      <AddLiquidityEarnMessage />
+      {/* <AddLiquidityEarnMessage /> */}
 
             
 	  <Box display="flex" justifyContent="space-between" mb="28px" className={classes.container}>

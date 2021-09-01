@@ -373,20 +373,6 @@ const PoolDeposit: React.FC<React.HTMLAttributes<HTMLDivElement>> = (props: any)
   }
 
 
-  // const contentTxApprove = "1. Unloacky";
-
-  console.log("+++++++++++++ TEST ++++++++++++");
-  console.log("+++++++++++++ TEST ++++++++++++");
-  console.log("+++++++++++++ TEST ++++++++++++");
-  console.log(showTxApproveHusd);
-  console.log(showTxApproveToken);
-  console.log(showTxApprove);
-  console.log(loadingApproveTx);
-  console.log(onApproveTx);
-  console.log("+++++++++++++ TEST ++++++++++++");
-  console.log("+++++++++++++ TEST ++++++++++++");
-  console.log("+++++++++++++ TEST ++++++++++++");
-  console.log("+++++++++++++ TEST ++++++++++++");
 
   return (
     <Box display="flex" flexDirection="column" {...rest} className={clsx(classes.root, className)}>
