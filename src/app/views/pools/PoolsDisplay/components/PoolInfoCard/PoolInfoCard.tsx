@@ -8,7 +8,7 @@ import { PoolSwapVolumeMap, RootState, TokenInfo, TokenState } from "app/store/t
 // import { PoolSwapVolumeMap, RewardsState, RootState, TokenInfo, TokenState } from "app/store/types";
 import { AppTheme } from "app/theme/types";
 import { hexToRGBA, useNetwork, useValueCalculators } from "app/utils";
-import { BIG_ZERO, HUSD_ADDRESS, HASH_ADDRESS } from "app/utils/constants";
+import { BIG_ZERO, HUSD_ADDRESS } from "app/utils/constants";
 import { toHumanNumber } from "app/utils/strings/strings";
 // import { bnOrZero, toHumanNumber } from "app/utils/strings/strings";
 import cls from "classnames";
@@ -260,7 +260,7 @@ const PoolInfoCard: React.FC<Props> = (props: Props) => {
   }, [network, rewardsState.epochInfo, rewardsState.rewardByPools, token, usdValues, tokenState.prices, tokenState.tokens, valueCalculators]);
 */
 
-  if (token.isZil || token.address === HUSD_ADDRESS || token.address === HASH_ADDRESS) return null;
+  if (token.isZil) return null;
 
   const decimals = token.symbol === "ZIL" ? 12 : (token.decimals ?? 0);
 

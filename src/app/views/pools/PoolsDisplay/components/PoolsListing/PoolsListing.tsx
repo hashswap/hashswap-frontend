@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 // import { Text } from "app/components";
 import { RootState, TokenInfo, TokenState } from "app/store/types";
 import { AppTheme } from "app/theme/types";
-import { BIG_ZERO } from "app/utils/constants";
+import { BIG_ZERO, HUSD_ADDRESS, HASH_ADDRESS } from "app/utils/constants";
 import cls from "classnames";
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
@@ -130,6 +130,7 @@ const PoolsListing: React.FC<Props> = (props: Props) => {
     };
   };
 
+       
   return (
     <Box {...rest} className={cls(classes.root, className)} mt={6} mb={2}>
       <Box display="flex" justifyContent="space-between" mb={2} className={classes.header}>
@@ -138,11 +139,13 @@ const PoolsListing: React.FC<Props> = (props: Props) => {
         <PoolsSearchInput className={classes.search} onSearch={onSearch}/>
       </Box>
       <Grid container spacing={1}>
-        {otherTokens.slice(0, limits.others).map((token) => (
+        {otherTokens.slice(0, limits.others).map((token) => ( 
+	  (token.isZil || token.address === HUSD_ADDRESS || token.address === HASH_ADDRESS) ? 
+	  null : 
           <Grid key={token.address} item xs={12} md={12}>
             <PoolInfoCard token={token} />
           </Grid>
-        ))}
+	  ))}
       </Grid>
       <Box display="flex" justifyContent="center" marginY={4} marginX={1}>
         <Button
