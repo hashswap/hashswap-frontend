@@ -56,7 +56,8 @@ const CurrencyLogo = (props: any) => {
   }, [blockchain, address, bridgeTokens.eth])
 
   if (network === Network.TestNet) {
-    tokenIconUrl = `https://dr297zt0qngbx.cloudfront.net/tokens/testnet/${logoAddress}`
+    // tokenIconUrl = `https://dr297zt0qngbx.cloudfront.net/tokens/testnet/${logoAddress}`
+    tokenIconUrl = `http://celeb-images.nyc3.cdn.digitaloceanspaces.com/hashswap/${logoAddress}`
   } else {
     tokenIconUrl = `https://meta.viewblock.io/ZIL${tokenKey}/logo${urlSuffix}`
   }
@@ -67,7 +68,8 @@ const CurrencyLogo = (props: any) => {
       <img 
         className={classes.svg} 
         src={error ? fallbackImg : tokenIconUrl}
-        alt={`${currency} Token Logo`}
+        // src= {tokenIconUrl}
+        alt={`${currency} Token Logo ${error} ${tokenIconUrl}`}
         loading="lazy"
         onError={(() => setError(true))}
       />

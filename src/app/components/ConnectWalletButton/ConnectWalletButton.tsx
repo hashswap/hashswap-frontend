@@ -17,11 +17,13 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     minWidth: 50,
   },
   button: {
-    height: "6vh",
+    height: 30,
     padding: "4px 10px",
-    border: "1px solid #eaeaea",
+    border: "0px solid rgb(95 87 87 / 25%)",
+    background: "#e3eefd",
+    boxShadow: "0 1px 3px 0 rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 2px 1px -1px rgb(0 0 0 / 12%)",
     borderRadius: "8px",
-    color: '#fafafa',
+    color: '#000',
     marginRight: theme.spacing(2),
     minHeight: 26
   },

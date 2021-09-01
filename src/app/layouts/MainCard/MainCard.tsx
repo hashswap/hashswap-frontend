@@ -4,6 +4,7 @@ import { AppTheme } from "app/theme/types";
 import { PaperProps } from "material-ui";
 import React, { Fragment, useRef } from "react";
 import NavBar from "./components/NavBar";
+import PoolsOverview from "app/views/pools/PoolsOverview";
 
 const CARD_BORDER_RADIUS = 12;
 
@@ -115,6 +116,9 @@ const MainCard: React.FC<PaperProps> = (props: any) => {
             </Paper>
           </Box>
         </Box>
+      </Box>
+      <Box className={classes.root}>
+   	 <PoolsOverview />
       </Box>
     </Fragment>
   );

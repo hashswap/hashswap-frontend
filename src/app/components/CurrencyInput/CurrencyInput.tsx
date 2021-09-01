@@ -229,7 +229,7 @@ const CurrencyInput: React.FC<CurrencyInputProps> = (props: CurrencyInputProps) 
             {fixedToken ? (
               <Box py={"4px"} px={"16px"} className={classes.currencyButton}>
                 <Box display="flex" alignItems="center">
-                  <CurrencyLogo currency={token?.symbol} address={token?.address} blockchain={token?.blockchain} className={classes.currencyLogo} />
+                  <CurrencyLogo key={new Date().getTime()}  currency={token?.symbol} address={token?.address} blockchain={token?.blockchain} className={classes.currencyLogo} />
                   <Typography variant="button" className={classes.currencyText}>{token?.symbol}</Typography>
                 </Box>
               </Box>
@@ -243,7 +243,7 @@ const CurrencyInput: React.FC<CurrencyInputProps> = (props: CurrencyInputProps) 
                 }
                 <Button disableRipple className={classes.currencyButton} onClick={() => setShowCurrencyDialog(true)}>
                   <Box display="flex" alignItems="center">
-                    {token && <CurrencyLogo currency={token.registered && token.symbol} blockchain={token?.blockchain} address={token.address} className={classes.currencyLogo} />}
+                    {token && <CurrencyLogo key={new Date().getTime()}  currency={token.symbol} blockchain={token?.blockchain} address={token.address} className={classes.currencyLogo} />}
                     <Typography variant="button" className={classes.currencyText}>{token?.symbol || "Select Token"}</Typography>
                   </Box>
                   <ExpandMoreIcon className={classes.expandIcon} />
