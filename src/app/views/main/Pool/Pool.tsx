@@ -1,6 +1,7 @@
 import { Box, IconButton, } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import { Notifications, ShowAdvanced } from "app/components";
+import { ShowAdvanced } from "app/components";
+// import { Notifications, ShowAdvanced } from "app/components";
 import MainCard from "app/layouts/MainCard";
 import { actions } from "app/store";
 import { LayoutState, OpenCloseState, PoolFormState, RootState } from "app/store/types";
@@ -87,7 +88,7 @@ const PoolView: React.FC<React.HTMLAttributes<HTMLDivElement>> = (props: any) =>
 
   return (
     <MainCard {...rest} className={cls(classes.root, className)}>
-      <Notifications />
+      {/* <Notifications /> */}
       {!poolToken?.pool && (
         <NewPoolMessage token={poolToken || undefined} />
       )}
