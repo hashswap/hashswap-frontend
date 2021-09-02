@@ -4,7 +4,7 @@ import { HelpInfo, KeyValueDisplay, PotentialRewardInfo } from "app/components";
 import { LayoutState, RootState, TokenInfo, TokenState } from "app/store/types";
 import { AppTheme } from "app/theme/types";
 import { useMoneyFormatter } from "app/utils";
-import { BIG_ZERO, ZIL_ADDRESS } from "app/utils/constants";
+import { BIG_ZERO, HASH_ADDRESS } from "app/utils/constants";
 import { MoneyFormatterOptions } from "app/utils/useMoneyFormatter";
 import BigNumber from "bignumber.js";
 import cls from "classnames";
@@ -67,7 +67,7 @@ const PoolDetail: React.FC<PoolDetailProps> = (props: PoolDetailProps) => {
   const liquidityTokenRate = poolToken?.pool?.totalContribution.isPositive() ? poolToken!.pool!.tokenReserve.div(poolToken!.pool!.totalContribution) : BIG_ZERO;
 
   const zilFormatOpts: MoneyFormatterOptions = {
-    // symbol: "ZIL",
+    // symbol: "HASH",
     compression: 12,
   };
   const formatOpts: MoneyFormatterOptions = {
@@ -79,7 +79,7 @@ const PoolDetail: React.FC<PoolDetailProps> = (props: PoolDetailProps) => {
     if (!token?.pool) return <span className={classes.textWrapper}>-</span>;
     const { zilReserve, tokenReserve } = token.pool;
     return (
-      <span className={classes.textWrapper}><span className={classes.textColoured}>{moneyFormat(zilReserve, zilFormatOpts)}</span> ZIL + <span className={classes.textColoured}>{moneyFormat(tokenReserve, formatOpts)}</span> {token!.symbol}</span>
+      <span className={classes.textWrapper}><span className={classes.textColoured}>{moneyFormat(zilReserve, zilFormatOpts)}</span> HASH + <span className={classes.textColoured}>{moneyFormat(tokenReserve, formatOpts)}</span> {token!.symbol}</span>
     )
   };
   const getShareValue = () => {
@@ -90,7 +90,7 @@ const PoolDetail: React.FC<PoolDetailProps> = (props: PoolDetailProps) => {
     const tokenContribution = share.times(tokenReserve);
     const zilContribution = share.times(zilReserve);
     return (
-      <span className={classes.textWrapper}> (<span className={classes.textColoured}>{moneyFormat(zilContribution, zilFormatOpts)}</span> ZIL + <span className={classes.textColoured}>{moneyFormat(tokenContribution, formatOpts)}</span> {token!.symbol})</span>
+      <span className={classes.textWrapper}> (<span className={classes.textColoured}>{moneyFormat(zilContribution, zilFormatOpts)}</span> HASH + <span className={classes.textColoured}>{moneyFormat(tokenContribution, formatOpts)}</span> {token!.symbol})</span>
     )
   };
   const getUserPoolShare = () => {
@@ -103,7 +103,7 @@ const PoolDetail: React.FC<PoolDetailProps> = (props: PoolDetailProps) => {
     return (
       <span className={classes.textWrapper}>
         <span className={classes.textColoured}>{moneyFormat(new BigNumber(liquidityTokenRate).times(poolToken?.pool?.exchangeRate || 0), { ...zilFormatOpts, compression: 0 })}</span>
-        {" "}ZIL + {" "}
+        {" "}HASH + {" "}
         <span className={classes.textColoured}>{moneyFormat(new BigNumber(liquidityTokenRate).shiftedBy(poolToken?.decimals || 0), formatOpts)}</span>
         {" "}{token!.symbol}
       </span>
@@ -111,15 +111,15 @@ const PoolDetail: React.FC<PoolDetailProps> = (props: PoolDetailProps) => {
   };
   const getExchangeRateValue= () => {
     if (!token?.pool) return <span className={classes.textWrapper}>-</span>;
-    const zilToken = tokenState.tokens[ZIL_ADDRESS];
+    const zilToken = tokenState.tokens[HASH_ADDRESS];
     const rate = token.pool.exchangeRate.shiftedBy(token!.decimals - zilToken.decimals);
 
     const shouldReverseRate = reversedRate;
 
     return (
       shouldReverseRate
-        ? <span className={classes.textWrapper}>1 {token!.symbol} = <span className={classes.textColoured}>{rate.pow(1).toNumber().toLocaleString("en-US", { maximumFractionDigits: 12 })}</span> ZIL</span>
-        : <span className={classes.textWrapper}>1 ZIL = <span className={classes.textColoured}>{rate.pow(-1).toNumber().toLocaleString("en-US", { maximumFractionDigits: 12 })}</span> {token!.symbol}</span>
+        ? <span className={classes.textWrapper}>1 {token!.symbol} = <span className={classes.textColoured}>{rate.pow(1).toNumber().toLocaleString("en-US", { maximumFractionDigits: 12 })}</span> HASH</span>
+        : <span className={classes.textWrapper}>1 HASH = <span className={classes.textColoured}>{rate.pow(-1).toNumber().toLocaleString("en-US", { maximumFractionDigits: 12 })}</span> {token!.symbol}</span>
     )
   };
 
