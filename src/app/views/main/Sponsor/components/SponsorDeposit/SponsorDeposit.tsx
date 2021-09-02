@@ -276,7 +276,7 @@ const SponsorDeposit: React.FC<React.HTMLAttributes<HTMLDivElement>> = (props: a
     showTxApprove = strings.bnOrZero(husdToken.allowances?.[byte20ContractAddress]).comparedTo(addHusdUnitlessAmount) < 0
   }
 
-  let contentTxApprove = "TOKEN APPR."
+  let contentTxApprove = "TOKEN APPROVE"
 
   return (
     <Box display="flex" flexDirection="column" {...rest} className={clsx(classes.root, className)}>
@@ -326,7 +326,7 @@ const SponsorDeposit: React.FC<React.HTMLAttributes<HTMLDivElement>> = (props: a
           variant="contained"
           color="primary"
           onClick={onAddSponsor}>
-          Add Liquidity
+          Add Sponsorship 
         </FancyButton>
         <LaunchPoolDetail token={poolToken || undefined} />
       </Box>

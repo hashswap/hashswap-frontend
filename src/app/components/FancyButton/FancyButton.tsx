@@ -94,7 +94,7 @@ const FancyButton: React.FC<FancyButtonProps> = (props: any) => {
   // override children content if wallet required
   // and not connected.
   const buttonContent = walletRequired ?
-    (!walletState.wallet ? "Connect Wallet" : (showTxApprove ? `2. ${children}` : children)) :
+    (!walletState.wallet ? "Connect Wallet" : (showTxApprove ? `${children}` : children)) :
     (children);
 
   

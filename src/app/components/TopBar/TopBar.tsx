@@ -2,7 +2,7 @@
 import { AppBar, Box, Toolbar } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { Brand } from "app/components/TopBar/components";
-import RewardsInfoButton from "app/layouts/RewardsInfoButton";
+// import RewardsInfoButton from "app/layouts/RewardsInfoButton";
 import cls from "classnames";
 import React from "react";
 // import React, { forwardRef, Fragment, useEffect, useRef, useState } from "react";
@@ -177,7 +177,7 @@ const TopBar: React.FC<TopBarProps & React.HTMLAttributes<HTMLDivElement>> = (pr
      </NavMenu>
     </Box>
     <Box display="flex" flex={1} justifyContent="flex-end" alignItems="center">
-    <RewardsInfoButton />
+    {/* <RewardsInfoButton /> */}
     <ConnectWalletButton />
           
     {/* <ThemeSwitch className={classes.themeSwitch} /> */}

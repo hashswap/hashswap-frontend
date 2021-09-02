@@ -360,13 +360,13 @@ const PoolDeposit: React.FC<React.HTMLAttributes<HTMLDivElement>> = (props: any)
   }
 
   const showTxApprove = showTxApproveToken || showTxApproveHusd ? true : false;
-  let contentTxApprove = "TOKEN APPR."
+  let contentTxApprove = "TOKEN APPROVE"
   let errorApproveTx = errorApproveTxToken;
   let loadingApproveTx = loadingApproveTxToken;
   let onApproveTx = onApproveTxToken;
 
   if(showTxApproveHusd){
-    contentTxApprove = "HUSD APPR."
+    contentTxApprove = "HUSD APPROVE"
     errorApproveTx = errorApproveTxHusd;
     loadingApproveTx = loadingApproveTxHusd;
     onApproveTx = onApproveTxHusd;
